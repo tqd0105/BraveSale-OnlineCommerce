@@ -1,0 +1,97 @@
+.footer__container {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.footer__support-item-container, .footer__about-item-container, .footer__contact-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.footer__support-item, .footer__about-item, .footer__contact-item {
+  text-decoration: none;
+  color: #808089;
+}
+
+.footer__support-item-text {
+  color: #333333;
+}
+
+.footer__contact-item-link {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.footer__delivery-item-container {
+  width: 60%;
+}
+
+.footer__delivery-item {
+  margin: 5px;
+}
+
+.footer__quick-contact {
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.footer__quick-contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.586);
+}
+
+.footer__quick-contact-item {
+  padding: 10px;
+  cursor: pointer;
+  animation-iteration-count: infinite;
+}
+
+.footer__scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  margin: 10px 20px;
+}
+
+@keyframes scrollUpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.footer__scrollToTop-img {
+  width: 50px;
+  height: 50px;
+  animation: scrollUpAnimation 1s infinite;
+}
+
+.footer__scrollToTop-img:hover {
+  opacity: 0.8;
+  animation-play-state: paused;
+}
+
+/*# sourceMappingURL=footer.css.map */

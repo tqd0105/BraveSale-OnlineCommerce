@@ -1,0 +1,285 @@
+@use "./_variables" as *;
+@use "./_mixins" as *;
+
+// Account menu
+
+.main__account-info-container {
+  margin-top: $margin-large;
+}
+
+.main__account-menu {
+  padding: $padding-large;
+  border-radius: $border-radius-small;
+  margin-top: $margin-large;
+}
+
+.main__account-menu-item {
+  margin-bottom: $margin;
+}
+
+.main__account-menu-heading {
+  @include flex(row, flex-start, center);
+  gap: $gap;
+  margin-bottom: $margin-large;
+  margin-top: $margin-small;
+}
+
+.main__account-menu-item-content {
+  @include flex(row, flex-start, center);
+  gap: $gap-large;
+  margin: $margin 0;
+  padding: $padding;
+}
+
+.main__account-menu-item-content-choosed {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(125, 125, 125, 0.47) 0px 10px 20px,
+    rgba(130, 130, 130, 0.495) 0px 6px 6px;
+  padding: $padding;
+  border-radius: $border-radius-small;
+}
+
+.main__account-menu-item-content-text {
+  text-decoration: none;
+  color: $color-text-secondary;
+}
+
+.main__account-menu-heading-text-container {
+  color: $color-text-secondary;
+}
+
+.main__account-menu-heading-text {
+  text-decoration: none;
+  color: $color-text;
+}
+
+// Account info
+
+.main__account-info {
+  background-color: white;
+  padding: $padding-large;
+  border-radius: $border-radius-small;
+  // margin-left: $margin-large;
+  width: 10%;
+}
+
+.main__account-info-heading {
+  text-align: center;
+  margin-top: 0;
+}
+
+.main__account-info-item-avatar {
+  position: relative;
+  @include flex(row, center, center);
+  margin-bottom: $margin-large;
+}
+
+.main__account-info-item-avatar-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: none;
+  transform: translate(-50%, 50%);
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.main__account-info-item {
+  @include flex(row, space-between, center);
+  gap: $gap-large;
+}
+
+.main__account-info-item {
+  margin: $margin-large 0;
+  input {
+    @include input(70%, 50%, $border-radius-small, $padding);
+    border: 1px solid $color-text-secondary;
+  }
+}
+
+.main__account-info-item-content-radio {
+  @include flex(row, center, center);
+  gap: $gap-small;
+}
+
+.main__account-info-item-content-radio {
+  input {
+    font-size: $font-size-large;
+  }
+}
+
+.main__account-info-item-content {
+  select {
+    border-radius: $border-radius-small;
+    padding: $padding;
+    margin: 0 $margin-small;
+  }
+}
+
+.main__account-info-item-btn-container {
+  @include flex(row, center, center);
+}
+
+.main__account-info-item-btn {
+  @include button(white, $secondary-color, $border-radius-small, $padding);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  outline: none;
+  width: 50%;
+}
+
+.main__account-info-item-btn:hover {
+  filter: brightness(0.95);
+}
+
+// Account setting
+
+.main__account-info-right {
+  @include flex(column, spa, center);
+}
+
+.main__account-info-item {
+  background-color: white;
+}
+
+.main__account-info-right-item {
+  background-color: white;
+  padding: $padding-large;
+  border-radius: $border-radius-small;
+}
+
+.main__account-info-right-item:first-child {
+  margin-bottom: 12px;
+}
+
+.main__account-info-right-item-heading {
+  text-align: center;
+  margin: 0;
+}
+
+.main__account-info-item-heading {
+  @include flex(row, center, center);
+}
+
+.main__account-info-item-heading-text {
+  padding: 0 $padding;
+}
+
+.main__account-info-item-content {
+  @include flex(row, space-between, center);
+}
+
+.main__account-info-item-right-content {
+  @include flex(row, space-between, center);
+  .main__account-info-item-btn-linked {
+    @include button(white, $primary-color, $border-radius-small, $padding);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .main__account-info-item-btn-delete {
+    @include button(white, $tertiary-color, $border-radius-small, $padding);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .main__account-info-item-btn-linked:hover {
+    filter: brightness(0.95);
+  }
+  .main__account-info-item-btn-delete:hover {
+    filter: brightness(0.95);
+  }
+  button {
+    @include button($color-text, white, $border-radius-small, $padding);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    color: $primary-color;
+    outline: none;
+  }
+  button:hover {
+    filter: brightness(0.95);
+  }
+}
+
+.main__account-info-item-right-content {
+  margin: 18px 0;
+}
+
+// MODAL SUCCESS
+html {
+  position: relative;
+  .main__modal-success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 28%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(206, 15, 15, 0.5);
+    @include flex(column, center, center);
+    border-radius: $border-radius-small;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    z-index: 100;
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: none;
+    animation: zoom 0.7s ease;
+  }
+
+  @keyframes zoom {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.main__modal-success-content {
+  @include flex(column, center, center);
+  h3 {
+    margin: $margin 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(67, 66, 66);
+  }
+  img {
+    margin: $margin-large 0 $margin-small 0;
+  }
+}
+
+.main__modal-success-btn {
+  margin: $margin 0 $margin-large 0;
+  button:first-child {
+    @include button(rgb(255, 254, 254), $primary-color, 10px, $padding);
+    outline: none;
+    margin-right: $margin-small;
+    // font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  button:last-child {
+    @include button(rgb(83, 81, 81), white, 8px, $padding);
+    outline: none;
+    margin-left: $margin-small;
+    // font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+}
+
+.main__modal-success-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: $primary-color;
+}

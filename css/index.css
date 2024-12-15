@@ -1,0 +1,40 @@
+/* Đặt các thuộc tính mặc định cho thẻ html */
+html {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Đặt các thuộc tính mặc định cho thẻ body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #f4f4f4cd;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  padding: 20px;
+  background-image: linear-gradient(to top, #2f95e8 0%, #00ffcc 100%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+footer {
+  margin: 20px 0 0 0;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Đảm bảo box-sizing áp dụng cho tất cả các phần tử */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
