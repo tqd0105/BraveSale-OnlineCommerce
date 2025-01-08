@@ -1,5 +1,20 @@
+.flexStart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
 .main__account-info-container {
   margin-top: 20px;
+}
+.main__account-info-container h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .main__account-menu {
@@ -32,16 +47,21 @@
   padding: 10px;
 }
 
-.main__account-menu-item-content-choosed {
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(125, 125, 125, 0.47) 0px 10px 20px, rgba(130, 130, 130, 0.495) 0px 6px 6px;
-  padding: 10px;
-  border-radius: 15px;
-}
-
 .main__account-menu-item-content-text {
   text-decoration: none;
   color: #808089;
+  font-family: "Geologica", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+}
+
+.main__account-info-item-title {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .main__account-menu-heading-text-container {
@@ -51,6 +71,21 @@
 .main__account-menu-heading-text {
   text-decoration: none;
   color: #333333;
+}
+
+.main__account-menu-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__account-menu-heading-avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .main__account-info {
@@ -86,15 +121,12 @@
 }
 
 .main__account-info-item {
+  margin: 20px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-}
-
-.main__account-info-item {
-  margin: 20px 0;
 }
 .main__account-info-item input {
   width: 70%;
@@ -116,6 +148,12 @@
 
 .main__account-info-item-content-radio input {
   font-size: 18px;
+}
+.main__account-info-item-content-radio label {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .main__account-info-item-content select {
@@ -182,6 +220,17 @@
 
 .main__account-info-item-heading-text {
   padding: 0 10px;
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main__account-info-item-content-name, .main__account-info-item-content-email, .main__account-info-item-content-phone {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .main__account-info-item-content {

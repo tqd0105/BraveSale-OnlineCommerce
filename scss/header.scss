@@ -24,8 +24,13 @@
   gap: 5px;
 }
 
-.header__top-notification-text, .header__top-account-text, .header__top-download-app-text, .header__top-language-text {
-  color: white;
+.header__top-notification-text, .header__top-account-text, .header__top-download-app-text, .header__top-language-text, .header__bottom-contact-hotline-call-text, .header__bottom-contact-hotline-mail-text,.header__bottom-quickSearch-item   {
+  color: rgb(0, 0, 0) !important;
+  font-weight: $font-weight-bold;
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 // Logo Shop
@@ -312,8 +317,8 @@
 // Header Bottom
 
 .header__bottom {
-  @include flex(row, center, center);
-  margin-left: 100px;
+  @include flex(row, space-around, center);
+  margin-left: 140px;
 }
 
 // Quick Search
@@ -326,36 +331,40 @@
 .header__bottom-quickSearch-item {
   text-decoration: none;
   padding: 0 $padding;
-  color: rgba(255, 255, 255, 0.822);
+  color: rgba(0, 0, 0, 0.515) !important;
 }
 
-// Delivery Location
+// CONTACT HOTLINE
 
-.header__bottom-delivery-location {
-  @include flex(row, right, center);
-  margin-left: 40px;
-  flex-wrap: nowrap;
-  width: 40%;
+.header__bottom-contact-hotline{
+  @include flex(row, center, center);
+  gap: $gap-large;
+  border-top: 1px solid rgba(175, 175, 175, 0.468);
+  padding-top: $padding;
 }
 
-.header__bottom-delivery-location-text-1 {
-  color: rgba(255, 255, 255, 0.7);
-  white-space: nowrap; /* Cho phép văn bản xuống dòng */
+.header__bottom-contact-hotline-call{
+  @include flex(row, center, center);
+  gap: $gap;
+  span{
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: rgb(0, 0, 0);
+    // background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    // background-clip: text;
+    // color: transparent; 
+  }
 }
 
-.header__bottom-delivery-location-text-2 {
-  padding-left: 5px;
-  text-decoration: underline;
-  white-space: nowrap; /* Cho phép văn bản xuống dòng */
-  word-wrap: break-word; /* Cắt từ nếu cần thiết */
-  width: 50%; /* Đảm bảo văn bản không bị tràn ra ngoài */
-  overflow: hidden; /* Ẩn văn bản thừa nếu có */
-  text-overflow: ellipsis;
-  color: white;
-}
-
-.header__bottom-delivery-location-icon {
-  font-size: $font_size_large;
-  margin-right: 5px;
-  color: $tertiary-color;
+.header__bottom-contact-hotline-mail{
+  @include flex(row, center, center);
+  gap: $gap;
+  span{
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: rgb(0, 0, 0);
+    // background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    // background-clip: text;
+    // color: transparent;
+  }
 }

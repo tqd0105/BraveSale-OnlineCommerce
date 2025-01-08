@@ -4,7 +4,7 @@
 // Cart header
 
 .main__cart-heading {
-  @include flex(row, flex-start, center);
+  @include flex(row, center, center);
   gap: $gap;
 }
 
@@ -35,9 +35,14 @@
 }
 
 .main__cart-content-product {
-  @include flex(row, space-between, center);
+  @include flex(row, flex-start, center);
   margin: $margin 0;
   padding: $padding 0;
+}
+
+.main__cart-content-product-item{
+  @include flex(row, center, center);
+  // gap: $gap-small;
 }
 
 .main__cart-content-product-info {
@@ -50,6 +55,13 @@
 .main__cart-content-product-name-link {
   text-decoration: none;
   color: $color-text;
+}
+
+.main__cart-content-product-allInfo-wrapper{
+  // display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  display: flex;
+  align-items: center;
+  // width: 100%;
 }
 
 h1 {
@@ -104,14 +116,13 @@ h1 {
   color: $primary-color;
 }
 
-.main__cart-content-product-total {
-  text-align: center;
-  padding-left: $padding-large + 5 !important;
-}
 
 .main__cart-content-product-remove {
-  text-align: center;
   cursor: pointer;
+}
+
+.main__cart-content-product-click-wrapper{
+  @include flex(row, space-between, center);
 }
 
 // Cart footer - voucher
@@ -332,6 +343,7 @@ html {
     text-align: right;
     outline: none;
     border-radius: $border-radius-small;
+    text-align: center;
     margin: $margin $margin-large;
     width: 50%;
     background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
@@ -341,6 +353,7 @@ html {
     outline: none;
     border-radius: 0; /* Đặt border-radius cho option (nếu cần) */
     text-align: center;
+
   }
   textarea {
     border: none;

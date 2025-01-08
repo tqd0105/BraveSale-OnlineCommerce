@@ -143,7 +143,7 @@
 /* Tablet*/
 @media (min-width: 769px) and (max-width: 1440px) {
     .wide{
-        width: 644px;
+        /* width: 644px; */
     }
 }
 

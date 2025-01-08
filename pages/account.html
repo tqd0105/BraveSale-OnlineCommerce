@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/account.css" />
     <link rel="stylesheet" href="/css/grid.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="/assets/images/header/BRAVEBUY_logo.png" />
@@ -22,20 +23,67 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit&family=Pridi:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header style="background-color: white">
       <div class="container col l-12">
         <div class="header__top">
           <!-- Logo Shop -->
-          <div class="header__top-logo">
-            <a href="/pages/index.html">
+          <div class="header__top-logo hidden-mobile hidden-tablet">
+            <a href="/index.html">
               <img
                 src="/assets/images/header/BRAVEBUY_LogoSlogan.png"
                 alt="BraveSale"
                 class="header__top-logo-img"
               />
             </a>
+          </div>
+          
+          <div class="header__top-logo hidden-mobile hidden-tablet hidden-laptop">
+            <a href="/index.html">
+              <img
+                src="/assets/images/header/BRAVEBUY_logo.png"
+                alt="BraveSale"
+                class="header__top-logo-img"
+              />
+            </a>
+          </div>
+          <div class="header__top-categoryIcon-forTablet hidden-mobile hidden-laptop">
+              <img
+                src="/assets/images/main/ForMobile/cart/list.png"
+                alt="BraveSale"
+                class="header__top-categoryIcon-forTablet-img"
+                width="30px"
+                height="30px"
+              />
           </div>
           <!-- Search Input -->
           <div class="header__top-search">
@@ -50,10 +98,40 @@
                 alt="Search"
                 width="20px"
                 height="20px"
-                class="header__top-search-icon"
+                class="header__top-search-icon hidden-mobile hidden-tablet"
               />
             </a>
+            <a>
+              <img
+                src="/assets/images/header/searchForMobile.png"
+                alt="Search"
+                width="25px"
+                height="25px"
+                class="header__top-search-icon-mobile hidden-laptop hidden-tablet"
+              />
+            </a>
+            <div class="header__top-logo hidden-laptop hidden-tablet">
+              <a href="/index.html">
+                <img
+                  src="/assets/images/header/BRAVEBUY_logo.png"
+                  alt="BraveSale"
+                  class="header__top-logo-img"
+                />
+              </a>
+            </div>
+            <div class="header__top-logo-home hidden-mobile hidden-laptop">
+              <a href="/index.html">
+                <img
+                src="/assets/images/header/BRAVEBUY_logo.png"
+                  alt="BraveSale"
+                  class="header__top-logo-home-img"
+                  width="25px"
+                  height="25px"
+                />
+              </a>
+            </div>
           </div>
+          <!-- Notification -->
           <div class="header__top-notification">
             <div class="header__top-notification-container">
               <img
@@ -62,7 +140,9 @@
                 width="20px"
                 height="20px"
               />
-              <span class="header__top-notification-text">Thông báo</span>
+              <span class="header__top-notification-text hidden-mobile"
+                >Thông báo</span
+              >
             </div>
             <div class="header__top-notification-dropdown">
               <div class="header__top-notification-dropdown-item">
@@ -105,6 +185,7 @@
                       alt="Close"
                       width="20px"
                       height="20px"
+                      class="delete-noti"
                     />
                   </a>
                 </div>
@@ -150,6 +231,7 @@
                       alt="Close"
                       width="20px"
                       height="20px"
+                      class="delete-noti"
                     />
                   </a>
                 </div>
@@ -195,6 +277,7 @@
                       alt="Close"
                       width="20px"
                       height="20px"
+                      class="delete-noti"
                     />
                   </a>
                 </div>
@@ -240,6 +323,7 @@
                       alt="Close"
                       width="20px"
                       height="20px"
+                      class="delete-noti"
                     />
                   </a>
                 </div>
@@ -247,7 +331,7 @@
             </div>
           </div>
           <!-- Account Info -->
-          <div class="header__top-account">
+          <div class="header__top-account hidden-mobile">
             <div class="header__top-account-avatar">
               <img
                 src="/assets/images/header/user.png"
@@ -332,9 +416,278 @@
                 />
               </a>
             </div>
+            <div class="main__account-menu-forTablet hidden-laptop hidden-mobile">
+              <div class="main__account-menu-heading">
+                <div class="main__account-menu-heading-avatar">
+                  <img
+                    src="/assets/images/account/avatar.png"
+                    width="40px"
+                    height="40px"
+                    alt="account"
+                  />
+                  <span class="main__account-menu-heading-text-container">
+                    Tài khoản của tôi
+                    <br />
+                    <a href="../pages/account.html" class="main__account-menu-heading-text"
+                      >Nguyễn Văn A</a
+                    >
+                  </span>
+                </div>
+                <div
+                  class="main__account-menu-heading-rightArrow-icon hidden-laptop hidden-tablet"
+                >
+                  <img
+                    src="../assets/images/main/ForMobile/account/right-arrow.png"
+                    width="25px"
+                    height="25px"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="main__account-menu-item">
+                <div
+                  class="main__account-menu-item-content account-info main__account-menu-item-content-choosed"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/user.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="../pages/account.html" class="main__account-menu-item-content-text"
+                      >Thông tin tài khoản</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/password.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Đổi mật khẩu</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/gps.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Địa chỉ</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/order.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Quản lý đơn hàng</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/atm-card.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Phương thức thanh toán</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/dollar.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Brave Xu</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/coupon.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Kho voucher</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/eye.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Sản phẩm đã xem</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/love.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Sản phẩm yêu thích</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/technical-support.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Hỗ trợ khách hàng</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="main__account-menu-item-content-button hidden-laptop">
+                  <button>Đăng xuất</button>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- Language -->
-          <div class="header__top-language">
+          <div class="header__top-language hidden-mobile hidden-tablet">
             <div class="header__top-language-first">
               <img
                 src="/assets/images/header/usa_flag.png"
@@ -357,7 +710,7 @@
             </div>
           </div>
           <!-- Download App -->
-          <div class="header__top-download-app">
+          <div class="header__top-download-app hidden-mobile">
             <img
               src="/assets/images/header/download.png"
               alt="App Store"
@@ -368,7 +721,7 @@
             <div class="header__top-download-app-dropdown">
               <img
                 src="/assets/images/header/QR_template.png"
-                width="150px"
+                width="180px"
                 height="150px"
                 alt="App Store"
                 class="header__top-download-app-dropdown-qr"
@@ -409,11 +762,12 @@
             <span class="header__top-cart-quantity">5</span>
           </div>
         </div>
-        <div class="header__bottom">
+        <div class="header__bottom hidden-mobile hidden-tablet">
           <div class="header__bottom-quickSearch">
             <a href="#" class="header__bottom-quickSearch-item">Sách</a>
             <a href="#" class="header__bottom-quickSearch-item">Điện thoại</a>
             <a href="#" class="header__bottom-quickSearch-item">Thể thao</a>
+            <a href="#" class="header__bottom-quickSearch-item">Điện tử</a>
             <a href="#" class="header__bottom-quickSearch-item">Thời trang</a>
             <a href="#" class="header__bottom-quickSearch-item">Đồ gia dụng</a>
             <a href="#" class="header__bottom-quickSearch-item"
@@ -421,16 +775,31 @@
             >
             <a href="#" class="header__bottom-quickSearch-item">Máy tính</a>
           </div>
-          <div class="header__bottom-delivery-location">
-            <i
-              class="fa-solid fa-location-dot header__bottom-delivery-location-icon"
-            ></i>
-            <span class="header__bottom-delivery-location-text-1"
-              >Giao hàng tại:
-            </span>
-            <span class="header__bottom-delivery-location-text-2"
-              >Chung cư EHome S, Tổ 9, KP2 Phú Hữu TP, Quận 9, Hồ Chí Minh</span
-            >
+          <div
+            class="header__bottom-contact-hotline hidden-mobile hidden-tablet"
+          >
+            <div class="header__bottom-contact-hotline-call">
+              <img
+                src="../assets/images/main/call.png"
+                width="20px"
+                height="20px"
+                alt="Call Icon"
+              />
+              <span class="header__bottom-contact-hotline-call-text"
+                >1800 6969</span
+              >
+            </div>
+            <div class="header__bottom-contact-hotline-mail">
+              <img
+                src="../assets/images/main/mail.png"
+                width="20px"
+                height="20px"
+                alt="Call Icon"
+              />
+              <span class="header__bottom-contact-hotline-mail-text"
+                >bravesale@onlineshop.vn</span
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -439,147 +808,466 @@
       <div class="container">
         <div class="grid wide">
           <div class="row">
-            <div class="main__account-menu col l-2">
+            <div class="main__left hidden-tablet col l-2">
+              <div class="main__left-category">
+                <div class="main__left-category-close-forMobile hidden-laptop hidden-tablet">
+                  <img src="./assets/images/main/ForMobile/ControlBar/information.png" width="30px" height="30px" alt="">
+                  <img src="./assets/images/main/ForMobile/ControlBar/delete.png" width="30px" height="30px" alt="" id="close-category">
+                </div>
+                <div class="text-center">
+                <h3 class="main__left-category-title">Danh mục</h3></div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/book.png"
+                    alt="Book"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Sách</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/phone.png"
+                    alt="Phone"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Điện thoại</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/sport.png"
+                    alt="Sport"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Thể thao</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/fashion.png"
+                    alt="Fashion"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Thời trang</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/food.png"
+                    alt="Food"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Đồ ăn</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/drink.png"
+                    alt="Drink"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Đồ uống</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/school-material.png"
+                    alt="Study"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Đồ dùng học tập</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/accessories.png"
+                    alt="Accessory"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Phụ kiện</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/shoes.png"
+                    alt="Shoes"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Giày - dép</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/watch.png"
+                    alt="Watch"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Đồng hồ</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/pet.png"
+                    alt="Pet"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Thú cưng</a>
+                </div>
+                <div class="main__left-category-item">
+                  <img
+                    src="/assets/images/main/categories/bag.png"
+                    alt="Bag"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-category-item">Balo - Vali</a>
+                </div>
+              </div>
+              <div class="main__left-other-service ">
+                <div class="text-center">
+                <h3 class="main__left-other-service-title">Dịch vụ khác</h3>
+              </div>
+                <div class="main__left-other-service-item">
+                  <img
+                    src="/assets/images/main/other service/atm-card.png"
+                    alt="Gift"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-other-service-item">
+                    Dịch vụ thẻ, tài khoản
+                  </a>
+                </div>
+                <div class="main__left-other-service-item">
+                  <img
+                    src="/assets/images/main/other service/pay.png"
+                    alt="Gift"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-other-service-item">
+                    Mua trước trả sau
+                  </a>
+                </div>
+                <div class="main__left-other-service-item">
+                  <img
+                    src="/assets/images/main/other service/pay_bill.png"
+                    alt="Gift"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-other-service-item">
+                    Thanh toán hoá đơn
+                  </a>
+                </div>
+                <div class="main__left-other-service-item">
+                  <img
+                    src="/assets/images/main/other service/paypal.png"
+                    alt="Gift"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-other-service-item">
+                    Thanh toán qua PayPal
+                  </a>
+                </div>
+                <div class="main__left-other-service-item">
+                  <img
+                    src="/assets/images/main/other service/gift.png"
+                    alt="Gift"
+                    width="20px"
+                    height="20px"
+                  />
+                  <a href="#" class="main__left-other-service-item">Quà tặng</a>
+                </div>
+              </div>
+            </div>
+            <div class="main__account-menu col l-2 c-12">
               <div class="main__account-menu-heading">
-                <img
-                  src="/assets/images/account/avatar.png"
-                  width="40px"
-                  height="40px"
-                  alt="account"
-                />
-                <span class="main__account-menu-heading-text-container">
-                  Tài khoản của tôi
-                  <br />
-                  <a href="#" class="main__account-menu-heading-text"
-                    >Nguyễn Văn A</a
-                  >
-                </span>
+                <div class="main__account-menu-heading-avatar">
+                  <img
+                    src="/assets/images/account/avatar.png"
+                    width="40px"
+                    height="40px"
+                    alt="account"
+                  />
+                  <span class="main__account-menu-heading-text-container">
+                    Tài khoản của tôi
+                    <br />
+                    <a href="#" class="main__account-menu-heading-text"
+                      >Nguyễn Văn A</a
+                    >
+                  </span>
+                </div>
+                <div
+                  class="main__account-menu-heading-rightArrow-icon hidden-laptop hidden-tablet"
+                >
+                  <img
+                    src="../assets/images/main/ForMobile/account/right-arrow.png"
+                    width="25px"
+                    height="25px"
+                    alt=""
+                  />
+                </div>
               </div>
               <div class="main__account-menu-item">
                 <div
-                  class="main__account-menu-item-content main__account-menu-item-content-choosed"
+                  class="main__account-menu-item-content account-info main__account-menu-item-content-choosed"
                 >
-                  <img
-                    src="/assets/images/account/user.png"
-                    width="20px"
-                    height="20px"
-                    alt="account"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Thông tin tài khoản</a
-                  >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/user.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Thông tin tài khoản</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/password.png"
-                    width="20px"
-                    height="20px"
-                    alt="password"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Đổi mật khẩu</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/password.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Đổi mật khẩu</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/gps.png"
-                    width="20px"
-                    height="20px"
-                    alt="address"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Địa chỉ</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/gps.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Địa chỉ</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/order.png"
-                    width="20px"
-                    height="20px"
-                    alt="order"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Quản lý đơn hàng</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/order.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Quản lý đơn hàng</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/atm-card.png"
-                    width="20px"
-                    height="20px"
-                    alt="payment"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Phương thức thanh toán</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/atm-card.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Phương thức thanh toán</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
 
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/dollar.png"
-                    width="20px"
-                    height="20px"
-                    alt="xu"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >BraveSale Xu</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/dollar.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Brave Xu</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
 
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/coupon.png"
-                    width="20px"
-                    height="20px"
-                    alt="voucher"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Kho Voucher</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/coupon.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Kho voucher</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
 
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/eye.png"
-                    width="20px"
-                    height="20px"
-                    alt="viewed"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Sản phẩm đã xem</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/eye.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Sản phẩm đã xem</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
 
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/love.png"
-                    width="20px"
-                    height="20px"
-                    alt="love"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Sản phẩm yêu thích</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/love.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Sản phẩm yêu thích</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
                 </div>
 
-                <div class="main__account-menu-item-content">
-                  <img
-                    src="/assets/images/account/technical-support.png"
-                    width="20px"
-                    height="20px"
-                    alt="support"
-                  />
-                  <a href="#" class="main__account-menu-item-content-text"
-                    >Hỗ trợ khách hàng</a
-                  >
+                <div
+                  class="main__account-menu-item-content"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/technical-support.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Hỗ trợ khách hàng</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="main__account-menu-item-content-button hidden-laptop">
+                  <button>Đăng xuất</button>
                 </div>
               </div>
             </div>
 
             <div class="col l-10 main__account-info-container">
-              <h1>Thông tin tài khoản</h1>
-              <div class="row">
-                <div class="col l-6 main__account-info">
+              <div class="main__account-info-heading-title">
+              <h1>
+                <img
+                  src="/assets/images/account/user.png"
+                  width="40px"
+                  height="40px"
+                  alt="account"
+                />
+                <span>Thông tin tài khoản</span>
+              </h1>
+            </div>
+              <div class=" row flexCenter">
+                <div class="col l-6 m-10 main__account-info">
                   <h3 class="main__account-info-heading">Thông tin cá nhân</h3>
                   <div class="main__account-info-item-avatar">
                     <img
@@ -684,58 +1372,66 @@
                     </div>
                   </div>
                   <div class="main__account-info-item-btn-container">
-                  <button class="main__account-info-item-btn" id="save-info" >
-                    Lưu
-                  </button>
+                    <button class="main__account-info-item-btn" id="save-info">
+                      Lưu
+                    </button>
+                  </div>
                 </div>
-                </div>
-                <div class="main__account-info-right col l-6">
+                <div class="main__account-info-right col l-6 c-12 m-10">
                   <div class="main__account-info-right-item">
                     <h3 class="main__account-info-right-item-heading">
                       Cài đặt tài khoản
                     </h3>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/information.png" alt="edit" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/information.png"
+                          alt="edit"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Chỉnh sửa thông tin</span
                         >
                       </div>
-                      <button
-                        id="change-password"
-                      >
-                      Cập nhật
-                      </button>
+                      <button id="change-password">Cập nhật</button>
                     </div>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/reset-password.png" alt="lock" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/reset-password.png"
+                          alt="lock"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Đổi mật khẩu</span
                         >
                       </div>
-                      <button
-                        id="change-password"
-                      >
-                      Cập nhật
-                      </button>
+                      <button id="change-password">Cập nhật</button>
                     </div>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/shield.png" alt="pin" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/shield.png"
+                          alt="pin"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Cập nhật mã PIN</span
                         >
                       </div>
-                      <button
-                        id="change-pin"
-                      >
-                        Cập nhật
-                      </button>
+                      <button id="change-pin">Cập nhật</button>
                     </div>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/delete.png" alt="trash" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/delete.png"
+                          alt="trash"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Xoá tài khoản</span
                         >
@@ -754,7 +1450,12 @@
                     </h3>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/facebook.png" alt="facebook" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/facebook.png"
+                          alt="facebook"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Facebook</span
                         >
@@ -768,30 +1469,35 @@
                     </div>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/google.png" alt="google" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/google.png"
+                          alt="google"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Google</span
                         >
                       </div>
-                      <button
-                        id="google-link"
-                      >
-                        Liên kết
-                      </button>
+                      <button id="google-link">Liên kết</button>
                     </div>
                     <div class="main__account-info-item-right-content">
                       <div class="main__account-info-item-heading">
-                        <img src="/assets/images/account/linkedin.png" alt="linkedin" width="20px" height="20px">
+                        <img
+                          src="/assets/images/account/linkedin.png"
+                          alt="linkedin"
+                          width="20px"
+                          height="20px"
+                        />
                         <span class="main__account-info-item-heading-text"
                           >Linkedin</span
                         >
                       </div>
-                      <button
-                        id="linkedin-link"
-                      >
-                        Liên kết
-                      </button>
+                      <button id="linkedin-link">Liên kết</button>
                     </div>
+                  </div>
+                  <div class="main__account-info-right-item-buttonBack " id="back-forMobile">
+                    <button class="hidden-tablet hidden-laptop">Trở về</button>
                   </div>
                 </div>
               </div>
@@ -802,7 +1508,12 @@
       <div class="overlay"></div>
       <div class="main__modal-success">
         <div class="main__modal-success-content">
-          <img src="../assets/images/check.png" width="50px" height="50px" alt="">
+          <img
+            src="../assets/images/check.png"
+            width="50px"
+            height="50px"
+            alt=""
+          />
           <h3>Thao tác thành công</h3>
         </div>
         <div class="main__modal-success-btn">
@@ -810,13 +1521,19 @@
           <button id="back-home">Về trang chủ</button>
         </div>
         <div class="main__modal-success-close-btn" id="close-modal-success">
-          <img src="../assets/images/cross.png" width="25px" height="25px" alt="">
+          <img
+            src="../assets/images/cross.png"
+            width="25px"
+            height="25px"
+            alt=""
+          />
         </div>
       </div>
+      
     </main>
     <footer>
-      <div class="row">
-        <div class="col l-3">
+      <div class="footer row">
+        <div class="footer__container col l-3 c-6">
           <div class="footer__support-heading">
             <h4 class="footer__support-title">Hỗ trợ khách hàng</h4>
           </div>
@@ -832,7 +1549,7 @@
             <a href="#" class="footer__support-item">Chính sách thanh toán</a>
           </div>
         </div>
-        <div class="col l-3">
+        <div class="footer__container col l-3 c-6">
           <div class="footer__about-heading">
             <h4 class="footer__about-title">Về BraveSale</h4>
           </div>
@@ -844,7 +1561,7 @@
             <a href="#" class="footer__about-item">Điều kiện vận chuyển</a>
           </div>
         </div>
-        <div class="col l-3">
+        <div class="footer__container col l-3 c-6">
           <div class="footer__contact-heading">
             <h4 class="footer__contact-title">Hợp tác với chúng tôi</h4>
           </div>
@@ -882,67 +1599,147 @@
             </a>
           </div>
         </div>
-        <div class="col l-3">
+        <div class="footer__container col l-3 c-6">
           <div class="footer__delivery-heading">
             <h4 class="footer__delivery-title">Đơn vị vận chuyển</h4>
           </div>
           <div class="footer__delivery-item-container">
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/spx_express.png"
-                alt="SPX Express "
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/giao_hang_nhanh.png"
-                alt="Giao hàng nhanh"
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/viettel_post.png"
-                alt="Viettel Post"
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/vietnam_post.png"
-                alt="Vietnam Post"
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/j&t_express.png"
-                alt="J&T Express"
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/grab_express.png"
-                alt="Grab Express"
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/ninja_van.png"
-                alt="Ninja Van"
-              />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img src="/assets/images/footer/delivery_brand/be.png" alt="Be" />
-            </span>
-            <span href="#" class="footer__delivery-item">
-              <img
-                src="/assets/images/footer/delivery_brand/ahamove.png"
-                alt="AhaMove"
-              />
-            </span>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/spx_express.png"
+                  alt="SPX Express "
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/giao_hang_nhanh.png"
+                  alt="Giao hàng nhanh"
+                />
+              </span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/viettel_post.png"
+                  alt="Viettel Post"
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/vietnam_post.png"
+                  alt="Vietnam Post"
+                />
+              </span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/j&t_express.png"
+                  alt="J&T Express"
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/grab_express.png"
+                  alt="Grab Express"
+                />
+              </span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/ninja_van.png"
+                  alt="Ninja Van"
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/be.png"
+                  alt="Be"
+                />
+              </span>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="footer__scrollToTop">
+        <img
+          src="../assets/images/footer/arrow.png"
+          width="50px"
+          height="50px"
+          alt="Arrow"
+          class="footer__scrollToTop-img"
+        />
+      </div>
+      <div class="footer__info row">
+        <div class="footer__info-item col l-12">
+          <div class="footer__info-item-logo">
+            <img
+              src="../assets/images/header/BRAVEBUY_logo.png"
+              width="30px"
+              height="25px"
+              alt=""
+            />
+            <p>Công ty TNHH BraveSale</p>
+          </div>
+          <p class="footer__info-item-message">
+            Giấy chứng nhận đăng ký doanh nghiệp số 012345678 do Sở Kế Hoạch và
+            Đầu Tư Thành phố Hồ Chí Minh cấp lần đầu vào ngày 01/01/2011.
+          </p>
+          <div class="footer__info-item-certification">
+            <h3 class="footer__info-item-certification-title">
+              Chứng nhận bởi
+            </h3>
+            <div class="footer__info-item-certification-img">
+              <img
+                src="../assets/images/footer/info/certi1.png"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+              <img src="../assets/images/footer/info/certi2.svg" alt="" />
+              <img
+                src="../assets/images/footer/info/certi3.png"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+            </div>
+          </div>
+          <p class="footer__info-item-copyright">
+            © 2021 BraveSale. All Rights Reserved
+          </p>
         </div>
       </div>
     </footer>
 
-    <script src="../js/account.js"></script>
+    <script src="../js/account.js" ></script>
+    <script src="../js/index.js" ></script>
   </body>
 </html>

@@ -1,0 +1,1008 @@
+@use "./_variables" as *;
+@use "./_mixins" as *;
+
+// Mobile
+@media only screen and (max-width: 768px) {
+  header{
+    border: 1px solid #8c8a8a;
+    margin: 4px;
+  }
+  .container {
+    justify-content: center;
+  }
+  // Ẩn phần tử cho mobile
+  .hidden-mobile {
+    display: none !important;
+  }
+  .header__top {
+    justify-content: center;
+  }
+  // Thanh tìm kiếm
+  .header__top-search {
+    position: relative;
+    display: block;
+    .header__top-logo-img {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      transform: translateY(50%);
+      width: 30px !important;
+      height: 25px !important;
+      margin-left: $margin-small;
+    }
+    .header__top-search-input {
+      height: 50px;
+      width: 33vh;
+      border-radius: 10px;
+      padding-left: 35px;
+      margin: auto $margin;
+      border: 1px solid rgba(161, 161, 161, 0.588);
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    .header__top-search-icon-mobile {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-50%, 50%);
+      margin-right: $margin;
+    }
+  }
+  
+  // Thanh thông báo
+  .header__top-notification-container {
+    margin: 0 $margin;
+  }
+
+  // FLASHSALE
+
+  .main__right-flashSale-products {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .main__right-flashSale-products::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__right-flashSale-product-item {
+    // margin: $margin-small;
+  }
+
+  .main__right-flashSale-product-item-quantityRemain {
+    display: none;
+  }
+
+  .main__right-quick-access {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .main__right-quick-access > div {
+    flex: 0 0 calc(100% / 6);
+    box-sizing: border-box;
+  }
+
+  .main__right-quick-access > div:nth-child(6n + 1) {
+    clear: left;
+  }
+
+  .main__right-quick-access-item-text {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .main__right-advertisement-forMobile {
+    width: 100%; /* Chiều rộng carousel */
+    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+    position: relative;
+    padding: $padding $padding 0 $padding;
+    background-color: white;
+  }
+
+  .main__right-advertisement-wrapper-forMobile {
+    @include flex(row, flex-start, center);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .main__right-advertisement-wrapper-forMobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__right-advertisement-img-forMobile {
+    min-width: 100%; /* Mỗi phần tử chiếm 100% chiều rộng carousel */
+    flex-shrink: 0;
+    text-align: center;
+    padding: $padding;
+    background: white; /* Tùy chỉnh */
+    border-radius: 30px;
+  }
+
+  .pagination-forMobile {
+    text-align: center;
+    margin-bottom: $margin;
+  }
+
+  .dot-forMobile {
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    margin: 0 3px;
+    background: #ccc;
+    // border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot-forMobile.active-forMobile {
+    background: $secondary-color;
+    width: 28px;
+    height: 3px;
+  }
+
+  //   HIGHLIGHT GOODS
+
+  .main__right-highlightGoods-products {
+    flex-wrap: nowrap !important;
+    overflow: scroll;
+  }
+
+  .main__right-highlightGoods-products-list {
+    margin: $margin-small;
+    padding: $padding;
+    width: calc(100% + 10px);
+  }
+
+  .main__right-highlightGoods-products::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__right-highlightGoods-product-item {
+    margin: $margin-small;
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  //   FLASH SALE
+  .main__right-flashSale-product-item {
+    width: 100%;
+  }
+
+  .main__right-flashSale-product-item-quantityRemain {
+    width: 100%;
+  }
+
+  // FOR YOU
+
+  .main__right-product-container, .main__right-forYou-product-list,
+  .main__right-topBrand-products,
+  .main__right-topForeignGoods-products,
+  .main__right-topDeal-product {
+    overflow: scroll;
+  }
+
+  .main__right-product-container::-webkit-scrollbar,
+  .main__right-forYou-product-list::-webkit-scrollbar,
+  .main__right-topBrand-products::-webkit-scrollbar,
+  .main__right-topForeignGoods-products::-webkit-scrollbar,
+  .main__right-topDeal-product::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__right-product-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__right-forYou-product-list,
+  .main__right-topBrand-products,
+  .main__right-topForeignGoods-products,
+  .main__right-topDeal-product {
+    .c-5 {
+      max-width: 50% !important;
+    }
+  }
+
+  .main__right-suggest-products {
+    @include flex(row, center, center);
+    height: 900px; /* Chiều cao khi thu gọn */
+    overflow-y: hidden;
+    transition: max-height 1s ease-in-out;
+    margin: auto -35px;
+    .main__right-suggest-product-item {
+    }
+    flex-wrap: wrap;
+    .c-5 {
+      max-width: 50% !important;
+    }
+  }
+
+  .expand_suggest_products {
+    height: 100%; /* Giá trị lớn hơn đảm bảo mở rộng đủ */
+    overflow-y: scroll;
+  }
+
+  .collapse_suggest_products {
+    height: 900px; /* Chiều cao thu gọn */
+    overflow-y: hidden;
+  }
+
+  .main__right-suggest-product-header-link{
+    line-height: normal;
+  }
+
+  .main__right-suggest-product{
+    .c-4{
+        max-width: 50% !important;
+    }
+  }
+
+  .main__right-suggest-products-item{
+    width: 90%;
+  }
+
+  // CONTROL BAR
+
+  .main__right-control-bar-forMobile {
+    @include flex(row, space-between, center);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    .main__right-control-bar-forMobile-item {
+      @include flex(column, center, center);
+      padding: $padding-small;
+    }
+    z-index: 102;
+    img{
+      margin: $margin-small;
+    }
+    a{
+      color: $color-text;
+      text-decoration: none;
+    }
+  }
+
+  .control-bar-choosed{
+    background-color: rgb(104, 255, 122);
+    color: $primary-color;
+  }
+
+  //  Xoá bỏ hover ở mobile
+  .main__right-highlightGoods-product-item:hover, .main__right-flashSale-product-item:hover, .main__right-product-item:hover, .main__right-topBrand-product-item:hover, .main__right-topForeignGoods-products-item:hover, .main__right-topDeal-products-item:hover, .main__right-suggest-product-item:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  .main__right-suggest-product-header-content:not(:first-child):hover{
+    img, a{
+      transform: none;
+    }
+  }
+
+  // ACCOUNT
+  .main__account-info{
+    width: 100%;
+  }
+
+  .main__account-info-item-content select{
+    width: 100%;
+  }
+
+  .main__account-info-item-title{
+    white-space: nowrap;
+  }
+  .main__account-info-item-content{
+    width: 70%;
+  }
+
+  .main__account-info-item{
+    margin: $margin-large $margin;
+  }
+
+  .main__account-info-right-item{
+    width: 100%;
+  }
+
+  .main__account-info-right-item:first-child{
+    margin-top: $margin;
+  }
+
+  .main__account-menu {
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  .main__account-info-container{
+    display: none;
+    h1{
+      text-align: center;
+      margin: 0 0 $margin-large 0;
+      padding: $padding;
+      border-radius: $border-radius-small;
+      @include flex(row, center, center);
+      gap: $gap;
+      background-color: white;
+      border: 1px solid $secondary-color;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+  }
+
+  .main__account-info-item input {
+    padding: 8px 0;
+  }
+  
+  .main__account-info-item-content select{
+    padding: 8px 0;
+    text-align: center
+  }
+
+  .main__account-menu-item-content-button,{
+    @include flex(row, center, center);
+    button{
+      @include button(white, $primary-color, $border-radius-small, $padding);
+      width: 100%;
+      margin-top: $margin;
+    }
+  }
+
+  .main__account-info-right-item-buttonBack,{
+    @include flex(row, center, center);
+    button{
+      @include button(white, $primary-color, $border-radius-small, $padding);
+      width: 350px;
+      margin-top: $margin-large;
+    }
+  }
+
+    // Account Menu
+    .main__account-menu-heading{
+      @include flex(row, space-between, center);
+      border-radius: $border-radius-small;
+      border: 1px solid black;
+      background-color: white;
+      padding: $padding;
+    }
+
+    .main__account-menu-item{
+      background-color: white;
+      padding: $padding-small $padding $padding-large $padding; 
+      border-radius: $border-radius-small;
+      border: 1px solid rgba(148, 148, 148, 0.601);
+    }
+
+    .main__account-menu-item-content{
+      border-bottom: 1px solid rgba(144, 144, 144, 0.546);
+    }
+
+    .main__account-menu-heading-avatar{
+      @include flex(row, center, center);
+      gap: $gap;
+    }
+
+    .main__account-menu-item-content{
+      @include flex(row, space-between, center);
+    }
+
+    // Modal Success
+    .main__modal-success{
+      width: 70% !important;
+      height: 25% !important;
+    }
+
+    // CATEGORY SHOW/HIDE
+    .main__left{
+      display: none;
+      position: fixed;
+      bottom: 0;
+      z-index: 101;
+      left: 0;
+      right: 0;
+      height: 100%;
+      padding-bottom: 100px;
+    }
+
+    .main__left.col{
+        padding: 0 !important;
+    }
+    
+    .main__left-category, .main__left-other-service {
+      margin: 0 !important;
+      border-radius: 0;
+      padding-bottom: 16px;
+    }
+
+    .main__left-other-service{
+      padding-bottom: 100px;
+    }
+
+    .main__left-category-title, .main__left-other-service-title{
+      text-align: center;
+      font-size: 25px;
+      font-weight: $font-weight-bold;
+    }
+
+    .main__left-category-item, .main__left-other-service-item{
+      @include flex(row, center, center);
+      img{
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .main__left-category-close-forMobile{
+      @include flex(row, space-between, center);
+    }
+    
+    .header__top-account:hover .main__left{
+      display: block;
+    }
+    
+    // CART
+    
+    .main__cart-content-product{
+      flex-direction: column;
+    }
+    .main__cart-content-product-info{
+      @include flex(column, center, center);
+      max-width: 100%;
+      img{
+        margin: $margin auto;
+      }
+    }
+
+    .main__cart-content-product-item{
+      margin-right: 10px !important;
+    }
+  
+    .main__cart-content-product-allInfo-wrapper{
+      @include flex(column, center, center);
+      gap: $gap;
+    }
+
+    .main__cart-content-product-price{
+      @include flex(row, center, center);
+      margin: $margin-small auto;
+    }
+
+    .main__cart-content-product-price-old, .main__cart-content-product-price-new {
+      text-align: center;
+      @include flex(row, center, center);
+      line-height: 1.6;
+    }
+
+    .main__cart-content-product-delivery{
+      @include flex(row, center, center);
+    }
+
+    .main__cart-content-product-price{
+      line-height: 0.5;
+    }
+
+    .main__cart-content-product-delivery-text{
+      line-height: 0;
+    }
+
+    .main__cart-content{
+      margin-top: $margin;
+    }
+
+    .main__cart-heading{
+      h1{
+        margin: 0;
+        font-size: $font_size_large;
+      }
+    }
+
+    .main__cart-content-product-price-old{
+      font-size: $font_size_large;
+      color: $tertiary-color;
+      font-weight: $font-weight-bold;
+    }
+
+    .main__cart-content-product-price-new{
+      font-size: $font_size-small;
+      text-decoration: line-through;
+      color: #4c4c4cb4;
+      margin: 0 $margin-small;
+    }
+
+    .main__cart-summary-header{
+      margin-top: $margin-large;
+    }
+
+    .main__cart-summary-edit{
+      width: 97% !important;
+    }
+
+    .flexAdjust{
+      @include flex(row, center, center);
+      gap: $gap;
+    }
+
+    .main__cart-footer{
+      padding: $padding-large 0 0 0;
+      margin: auto 0 0 0;
+    }
+
+    .main__cart-content-product-quantity{
+      @include flex(row, center, center);
+      gap: $gap-small;
+      margin: $margin-small auto;
+    }
+
+    .main__cart-content-product-item{
+      margin: 0 !important;
+    }
+
+    .main__cart-content-product-name-link{
+      @include flex(row, center, center);
+
+      span{
+        text-align: center;
+        margin: $margin-small auto;
+      }
+    }
+
+    .main__cart-footer-voucher-input{
+      width: 75%;
+    }
+
+    .main__cart-footer-voucher-text{
+      white-space: nowrap;
+    }
+
+    .main__cart-footer-voucher-input-container{
+      @include flex(row, flex-end, center);
+      gap: $gap-small;
+    }
+
+    .main__cart-footer-voucher-btn{
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .main__modal-confirm-delete{
+      width: 80% !important;
+      height: 28% !important;
+    }
+
+    .main__modal-confirm-delete-content{
+      h3{
+        text-align: center;
+        padding: 0 $padding-small;
+      }
+    }
+
+
+
+  // FOOTER
+  .footer {
+    // @include flex(column, center, center);
+  }
+
+  .footer__delivery-item-container{
+    @include flex(column, center, center);
+    gap: $gap;
+  }
+
+  .footer__quick-contact{
+    bottom: 60px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer__scrollToTop{
+    bottom: 60px;
+    left: -10px;
+  }
+  
+  .footer__info-item{
+    margin-bottom: 30px;
+  }
+  .main__cart-footer{
+    border: none;
+  }
+  .main__cart-content-product{
+    border: 1px solid rgba(121, 121, 121, 0.532);
+    border-radius: $border-radius-small;
+  }
+  
+}
+
+// Tablet
+@media only screen and (min-width: 769px) and (max-width: 1025px) {
+  // Ẩn phần tử cho tablet
+  .container {
+    justify-content: center;
+  }
+  .hidden-tablet {
+    display: none;
+  }
+  header{
+    border: 1px solid #8c8a8a;
+    margin: 10px;
+  }
+  .header__top-search-input{
+    width: 43vw;
+    border-radius: 5px;
+    border: 2px solid $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-left: $margin-small;
+  }
+  .header__top-notification-container, .header__top-account-avatar, .header__top-download-app {
+    margin: auto $margin-small;
+  }
+
+  .header__top-notification-text, .header__top-account-text , .header__top-download-app-text{
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .main__right-forYou-product-list, .main__right-flashSale-products,
+  .main__right-topBrand-products,
+  .main__right-topForeignGoods-products,
+  .main__right-topDeal-product, .main__right-suggest-products,  .main__right-highlightGoods-products {
+    overflow: scroll;
+    width: 100%;
+    .m-5 {
+      max-width: 25% !important;
+    }
+  }
+
+  .main__right-forYou-product-list::-webkit-scrollbar, .main__right-flashSale-products::-webkit-scrollbar,
+  .main__right-topBrand-products::-webkit-scrollbar,
+  .main__right-topForeignGoods-products::-webkit-scrollbar,
+  .main__right-topDeal-product::-webkit-scrollbar, .main__right-suggest-products::-webkit-scrollbar,  .main__right-highlightGoods-products::-webkit-scrollbar{
+    display: none;
+  }
+
+  .main__right-suggest-products{
+    height: 900px;
+    .m-5 {
+      max-width: 31% !important;
+      margin: 10px 8px;
+      flex: 0 0 calc(31% - 2px);
+    }
+  }
+  .expand_suggest_products {
+    height: 100%; /* Giá trị lớn hơn đảm bảo mở rộng đủ */
+    overflow-y: scroll;
+  }
+  .collapse_suggest_products {
+    height: 900px; /* Chiều cao thu gọn */
+    overflow-y: hidden;
+  }
+  .main__right-suggest-product-header-link{
+    white-space: nowrap;
+    font-size: 10px;
+  }
+  // .main__right-highlightGoods-products{
+  //   display: flex !important;
+  //   width: 100%;
+  // }
+  // .main__right-highlightGoods-products-list{
+  //   flex-wrap: wrap !important;
+  // }
+  .main__right-advertisement-forMobile {
+    width: 100%; /* Chiều rộng carousel */
+    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+    position: relative;
+    padding: $padding $padding 0 $padding;
+    background-color: white;
+  }
+
+  .main__right-advertisement-wrapper-forMobile {
+    @include flex(row, flex-start, center);
+    transition: transform 0.4s ease-in-out;
+  }
+
+
+  .main__right-advertisement-wrapper-forMobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__right-advertisement-img-forMobile {
+    min-width: 100%; /* Mỗi phần tử chiếm 100% chiều rộng carousel */
+    flex-shrink: 0;
+    text-align: center;
+    padding: $padding;
+    background: white; /* Tùy chỉnh */
+    border-radius: 30px;
+  }
+
+  .pagination-forMobile {
+    text-align: center;
+    margin-bottom: $margin;
+  }
+
+  .dot-forMobile {
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    margin: 0 3px;
+    background: #ccc;
+    // border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot-forMobile.active-forMobile {
+    background: $secondary-color;
+    width: 28px;
+    height: 3px;
+  }
+  .main__right-quick-access-item-text{
+    font-size: 8px;
+  }
+  .main__cart-summary-header{
+    margin-top: $margin-large;
+  }
+  .main__modal-success{
+    width: 40% !important;
+    height: 20% !important;
+  }
+  .main__cart-summary-edit{
+    width: 90% !important;
+    // height: 50%;
+  }
+  .main__cart-content-product-total{
+    padding: 0 !important;
+    display: flex;
+  }
+  .main__cart-content-product{
+    justify-content: space-between ;
+  }
+
+  // ACCOUNT
+  .main__account-info-right-item{
+    margin-top: $margin;
+  }
+  .main__account-info-container{
+    // display: none;
+    h1{
+      text-align: center;
+      width: 90%;
+      margin: 0 0 $margin-large 0;
+      padding: $padding;
+      border-radius: $border-radius-small;
+      @include flex(row, center, center);
+      gap: $gap;
+      background-color: white;
+      border: 2px solid $secondary-color;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .main__account-info-heading-title{
+      @include flex(row, center, center);
+    }
+  }
+  .main__account-info-right-item-buttonBack,{
+    @include flex(row, center, center);
+    button{
+      @include button(white, $primary-color, $border-radius-small, $padding);
+      width: 350px;
+      margin-top: $margin-large;
+    }
+  }
+  .flexCenter{
+    justify-content: center;
+  }
+  .main__account-info{
+    padding: $padding-large $padding-large;
+  }
+
+  .main__account-menu{
+    display: none;
+  }
+
+  .main__account-menu-forTablet{
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 260px;
+    background-color: white;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius-small;
+    animation: zoomIn 0.5s ease;
+    transform-origin: top left;
+    padding: 0 $padding-large $padding $padding-large;
+    .main__account-menu-heading{
+      border-bottom: 1px solid $secondary-color;
+      padding: $padding-large 0;
+      @include flex(row, center, center);
+      margin: 0;
+    }
+  }
+
+  .main__account-menu-item-content-button{
+    @include flex(row, center, center);
+    margin: $margin;
+    button{
+      width: 100%;
+      @include button(white, $tertiary-color, $border-radius-small, $padding);
+    }
+  }
+
+  .main__account-menu-item-content{
+    border-bottom: 1px solid rgba(97, 97, 97, 0.556);
+  }
+  
+  .main__modal-confirm-delete{
+    width: 50% !important;
+    height: 20% !important;
+  }
+  .header__top-logo{
+    width: 50%;
+  }
+  .header__top-logo-img{
+    width: 50px;
+    height: 40px;
+  }
+  .header__top-account-dropdown{
+    display: none;
+  }
+  .header__top-account:hover .header__top-account-dropdown {
+    display: none;
+  }
+  .header__top-account:hover .main__account-menu-forTablet {
+    display: block;
+  }
+  .header__top-categoryIcon-forTablet-img{
+    margin-right: $margin-large;
+  }
+  .header__top-categoryIcon-forTablet{
+    @include flex(row, center, center);
+  }
+
+  .header__top-logo-home{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+  }
+  .header__top-search-input{
+    padding-left: 40px;
+  }
+
+  .showCategory-Tablet{
+    display: flex;
+    position: fixed;
+    top: 50px;
+    z-index: 102;
+    left: 85px;
+    height: 50%;
+    animation: zoomIn 0.5s ease;
+    transform-origin: top left;
+  }
+
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }  
+  }
+
+  .main__left{
+    border-radius: 0;
+  }
+  .main__left-category, .main__left-other-service {
+    border-radius: 5px;
+
+  }
+
+  .main__left{
+    border-radius: 5px;
+    animation: zoomIn 0.5s ease;
+
+  }
+  .main__left-category, .main__left-other-service {
+    border-radius: 0;
+  }
+  .text-center{
+    text-align: center !important;
+  }
+  // Notification
+  .header__top-notification-dropdown{
+    width: 300px;
+  }
+  .header__top-notification-dropdown-item{
+    justify-content: center;
+  }
+  .header__top-notification-dropdown-item-title{
+    width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: $font_size_small;
+    margin: $margin-small auto;
+  }
+  .header__top-notification-dropdown-item-description{
+    width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 3px;
+    font-size: 8px;
+  }
+  // Account Sync CSS
+  
+.main__account-menu-heading {
+  @include flex(row, flex-start, center);
+  gap: $gap;
+  margin-bottom: $margin-large;
+  margin-top: $margin-small;
+}
+
+.main__account-menu-item-content {
+  @include flex(row, flex-start, center);
+  gap: $gap-large;
+  margin: $margin 0;
+  padding: $padding;
+}
+
+.main__account-menu-item-content-text {
+  text-decoration: none;
+  color: $color-text-secondary;
+  font-family: "Geologica", serif;
+}
+
+.main__account-info-item-title{
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main__account-menu-heading-text-container {
+  color: $color-text-secondary;
+}
+
+.main__account-menu-heading-text {
+  text-decoration: none;
+  color: $color-text;
+}
+
+.main__account-menu-heading{
+  @include flex(row, space-between, center);
+}
+
+.main__account-menu-heading-avatar{
+  @include flex(row, center, center);
+  gap: $gap;
+}
+.header__top-account{
+  z-index: 103;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 768px) {
+  .header__top-language, .header__top-notification-text{
+    display: block !important;
+  }
+  .header__top-download-app{
+    display: flex !important;
+    @include flex(row, center, center);
+    margin: auto $margin;
+  }
+}
+
+// Laptop
+@media only screen and (min-width: 1025px) {
+  // Ẩn phần tử cho desktop
+  .hidden-laptop {
+    display: none;
+  }
+  .main__account-menu-item-content-choosed{
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(125, 125, 125, 0.47) 0px 10px 20px,
+      rgba(130, 130, 130, 0.495) 0px 6px 6px;
+    padding: $padding;
+    border-radius: $border-radius-small;
+  }
+}
+

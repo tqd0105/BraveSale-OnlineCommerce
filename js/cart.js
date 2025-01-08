@@ -9,9 +9,9 @@ const options = { month: "2-digit", day: "2-digit" };
 const deliveryDateFormatted = currentDate.toLocaleDateString("vi-VN", options);
 
 // Cập nhật nội dung trong phần tử HTML
-document.getElementById(
-  "delivery_date"
-).textContent += ` | 19h00 ${deliveryDateFormatted}`;
+document.querySelectorAll("#delivery_date").forEach((element) => {
+  element.textContent = `19h00 | ${deliveryDateFormatted}`;
+});
 
 // RÚT GỌN TÊN
 document.addEventListener("DOMContentLoaded", function () {
@@ -174,6 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hàm tăng số lượng
     function handleIncrease() {
       const quantity = parseInt(quantityElement.value, 10);
+      console.log(quantity);
+      
       quantityElement.value = quantity + 1;
       updateTotalPrice(productElement);
     }
@@ -547,10 +549,29 @@ continueElement.addEventListener("click", () => {
 backHomeElement.addEventListener("click", () => {
   modalSuccessElement.style.display = "none";
   overlayModalElement.style.display = "none";
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 });
 
 overlayModalElement.addEventListener("click", () => {
   modalSuccessElement.style.display = "none";
   overlayModalElement.style.display = "none";
+});
+
+
+// Category Tablet 
+const categoryIconTabletElement = document.querySelector(".header__top-categoryIcon-forTablet");
+const categoryTabletElement = document.querySelector(".main__left");
+
+// Toggle menu khi nhấn vào icon
+categoryIconTabletElement.addEventListener("click", () => {
+  categoryTabletElement.classList.toggle("showCategory-Tablet");
+});
+
+// Ẩn menu khi cuộn màn hình
+document.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0) {
+    categoryTabletElement.classList.remove("showCategory-Tablet");
+  }
 });

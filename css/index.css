@@ -19,15 +19,18 @@ body {
 
 header {
   padding: 20px;
-  background-image: linear-gradient(to top, #2f95e8 0%, #00ffcc 100%);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: white;
+ 
 }
 
 footer {
   margin: 20px 0 0 0;
   padding: 20px;
   background-color: white;
+  border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 /* Đảm bảo box-sizing áp dụng cho tất cả các phần tử */
@@ -35,6 +38,14 @@ footer {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+html, body{
+  overflow: scroll;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
 
 

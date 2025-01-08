@@ -153,10 +153,44 @@ continueElement.addEventListener("click", () => {
 backHomeElement.addEventListener("click", () => {
   modalElement.style.display = "none";
   overlayElement.style.display = "none";
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 });
 
 overlayElement.addEventListener("click", () => {
   modalElement.style.display = "none";
   overlayElement.style.display = "none";
+});
+
+// ACCOUNT HANDLECLICK
+const accountMenuElement = document.querySelector(".main__account-menu");
+const accountElement = document.querySelector(".main__account-menu-item-content.account-info");
+const accountInfoElement = document.querySelector(".main__account-info-container");
+const returnElement = document.querySelector("#back-forMobile");
+
+accountElement.addEventListener("click", () => {
+  accountInfoElement.style.display = "block";
+  accountMenuElement.style.display = "none";
+})
+
+returnElement.addEventListener("click", () => {
+  accountInfoElement.style.display = "none";
+  accountMenuElement.style.display = "block";
+})
+
+// Category Tablet 
+const categoryIconTabletElement = document.querySelector(".header__top-categoryIcon-forTablet");
+const categoryTabletElement = document.querySelector(".main__left");
+
+// Toggle menu khi nhấn vào icon
+categoryIconTabletElement.addEventListener("click", () => {
+  categoryTabletElement.classList.toggle("showCategory-Tablet");
+});
+
+// Ẩn menu khi cuộn màn hình
+document.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0) {
+    categoryTabletElement.classList.remove("showCategory-Tablet");
+  }
 });

@@ -3,11 +3,21 @@
 
 // Footer GENERAL
 
+.footer::after{
+  content: "";
+  display: block;
+  height: 1px;
+  margin: $margin-large auto;
+  width: 100%;
+  background-color: #85858557;
+}
+
 .footer__container{
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
+    
 }
 
 .footer__support-item-container, .footer__about-item-container, .footer__contact-item-container{
@@ -36,27 +46,28 @@
 
 .footer__delivery-item-container{
     width: 60%;
+    @include flex(column, center, center);
 }
 
 .footer__delivery-item{
-    margin: 5px;
+    margin: 2px;
 }
 
 .footer__quick-contact{
-    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;    position: fixed;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    position: fixed;
     bottom: 0;
     right: 0;
     padding: $padding;
     @include flex(column,center,center);
     border-radius: $border-radius-small;
     margin: $margin-large;
+    z-index: 100
 }
 
 .footer__quick-contact-container{
     @include flex(column, center, center);
     border-bottom: 2px solid rgba(255, 255, 255, 0.586);
-    
 }
 
 .footer__quick-contact-item{
@@ -72,6 +83,7 @@
     left: 0;
     cursor: pointer;
     margin: $margin $margin-large;
+    z-index: 100;
 }
 
 @keyframes scrollUpAnimation {
@@ -97,5 +109,44 @@
     animation-play-state: paused; 
   }
   
+  // Footer Info
+
+  .footer__info-item{
+    display: flex !important;
+    @include flex(column, center, center);
+  }
+
+  .footer__info-item-logo{
+    @include flex(row, center, center);
+    gap: $gap-small;
+    p{
+      margin: 0;
+      font-size: $font_size_large;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .footer__info-item-message{
+    margin: $margin 0; 
+    text-align: center;
+  }
+
+  .footer__info-item-copyright{
+    margin: $margin 0 0 0;
+  }
   
+  .footer__info-item-certification{
+    text-align: center;
+    h3{
+      margin: 0 0 $margin-small 0;
+    }
+  }
+
+  .footer__info-item-certification-img{
+    @include flex(row, center, center);
+    gap: $gap-large;
+    img{
+      cursor: pointer;
+    }
+  }
   
