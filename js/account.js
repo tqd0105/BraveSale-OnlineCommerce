@@ -163,7 +163,7 @@ overlayElement.addEventListener("click", () => {
 
 // ACCOUNT HANDLECLICK
 const accountMenuElement = document.querySelector(".main__account-menu");
-const accountElement = document.querySelector(".main__account-menu-item-content.account-info");
+const accountElement = document.querySelector(".main__account-menu-item-content.account-infos");
 const accountInfoElement = document.querySelector(".main__account-info-container");
 const returnElement = document.querySelector("#back-forMobile");
 
@@ -194,3 +194,17 @@ document.addEventListener("scroll", () => {
     categoryTabletElement.classList.remove("showCategory-Tablet");
   }
 });
+
+// LANGUAGE SWITCH
+const languageEN = document.querySelector(".header__top-language-first");
+const languageVN = document.querySelector(".header__top-language-second");
+
+languageVN.addEventListener("click", () => {
+  languageVN.style.display = "none";
+  languageEN.style.display = "flex";
+})
+
+languageEN.addEventListener("click", () => {
+  languageEN.style.display = "none";
+  languageVN.style.display = "flex";
+})

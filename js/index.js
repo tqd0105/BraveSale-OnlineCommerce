@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     var scrollToTopBtn = document.querySelector(".footer__scrollToTop");
 
-    if (window.scrollY > 300) {
+    if (window.scrollY) {
       scrollToTopBtn.style.display = "block";
     } else {
       scrollToTopBtn.style.display = "none";
@@ -456,7 +456,7 @@ fetch("https://dummyjson.com/products")
 
     });
 
-    const selectSuggestions = data.products.slice(0, 28);
+    const selectSuggestions = data.products.slice(0, 27);
     const suggestionsElement = document.querySelector(".main__right-suggest-products");
 
     selectSuggestions.forEach((product) => {
@@ -788,7 +788,38 @@ quantityRemainBarTopElements.forEach((element, index) => {
   }
 });
 
+// WIDTH NGẪU NHIÊN CHO TABLET
+// Lấy tất cả các phần tử có class tương ứng
+const quantityRemainBarTopElementsForTablet = document.querySelectorAll(
+  ".main__right-flashSale-product-item-quantityRemain-bar-top-forTablet"
+);
 
+quantityRemainBarTopElementsForTablet.forEach((element, index) => {
+  // Tạo giá trị ngẫu nhiên từ 1 đến 14
+  const randomWidthValue = Math.floor(Math.random() * 100) + 1; // Giá trị từ 1 đến 14
+  const randomWidth = randomWidthValue + "%"; // Đổi randomWidthValue thành dạng string với dấu "%"
+
+  // Cập nhật width cho thanh
+  element.style.width = randomWidth;
+
+  // Nếu randomWidthValue > 14, thêm border-radius
+  if (randomWidthValue > 13) {
+    element.style.borderRadius = "15px"; // Cập nhật border-radius nếu chiều rộng lớn hơn 14%
+  }
+
+  // Lấy phần tử number-width-display trong cùng một phần tử chứa thanh
+  const numberDisplay = element
+    .closest(".main__right-flashSale-product-item")
+    .querySelector(".number-width-display-forTablet");
+
+  // Cập nhật giá trị hiển thị cho phần tử .number-width-display
+  if (numberDisplay) {
+    numberDisplay.textContent = randomWidthValue; // Gán số hiển thị bằng randomWidthValue
+  }
+  console.log(randomWidthValue);
+});
+
+// EXPAND SUGGEST GOODS
 const viewMoreButton = document.querySelector(".main__right-viewMore-product-link");
 const suggestProductsElement = document.querySelector(".main__right-suggest-products");
 
@@ -890,5 +921,16 @@ deleteNotiElements.forEach((deleteElement, index) => {
   });
 });
 
-// IPAD MINI
-const
+// LANGUAGE SWITCH
+const languageEN = document.querySelector(".header__top-language-first");
+const languageVN = document.querySelector(".header__top-language-second");
+
+languageVN.addEventListener("click", () => {
+  languageVN.style.display = "none";
+  languageEN.style.display = "flex";
+})
+
+languageEN.addEventListener("click", () => {
+  languageEN.style.display = "none";
+  languageVN.style.display = "flex";
+})

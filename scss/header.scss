@@ -18,11 +18,28 @@
 .header__top-notification-container,
 .header__top-account-avatar,
 .header__top-cart,
-.header__top-language-first,
+.header__top-language-first, .header__top-language-second,
 .header__top-download-app {
   @include flex(row, center, center);
   gap: 5px;
 }
+
+.header__top-language-first{
+  display: none;
+}
+
+.header__top-language-first.active,
+.header__top-language-second.active {
+  display: flex; /* Hoặc block */
+  align-items: center;
+  gap: 5px;
+}
+
+.header__top-language{
+  cursor: pointer;
+}
+
+
 
 .header__top-notification-text, .header__top-account-text, .header__top-download-app-text, .header__top-language-text, .header__bottom-contact-hotline-call-text, .header__bottom-contact-hotline-mail-text,.header__bottom-quickSearch-item   {
   color: rgb(0, 0, 0) !important;
