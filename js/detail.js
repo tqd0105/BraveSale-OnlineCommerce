@@ -1,4 +1,4 @@
-// Lệnh cơ bản detail.js
+// TẠO API
 const express = require('express');
 const router = express.Router();
 
@@ -73,8 +73,12 @@ const orders = [
         ],
         descriptionDetail: [
             {
-                introFeature: "",
-                description: ["", "", "", "", ""]
+                introFeature: "Giường đa năng - Kết hợp sofa, tủ đồ và giường ngủ",
+                description: ["Giường gỗ tự nhiên với thiết kế đơn giản nhưng tinh tế, mang đến không gian ngủ ấm cúng và sang trọng. Chất liệu gỗ bền bỉ, giúp giường duy trì độ bền lâu dài.", 
+                    "Giường tầng tiết kiệm không gian, phù hợp cho phòng ngủ của trẻ em. Thiết kế chắc chắn và an toàn, với các bậc thang dễ sử dụng.", 
+                    "Chiếc giường bọc nệm hiện đại này có khung giường được phủ lớp nệm dày, giúp tạo sự êm ái tuyệt đối cho giấc ngủ. Lớp vải hoặc da cao cấp không chỉ tạo nên vẻ ngoài sang trọng mà còn dễ dàng vệ sinh, bảo quản. Thiết kế đầu giường cao giúp người sử dụng có thể tựa lưng thoải mái khi đọc sách hoặc xem TV. Với màu sắc trung tính và chi tiết trang trí tinh tế, chiếc giường này phù hợp với nhiều phong cách nội thất từ hiện đại đến cổ điển, mang lại sự thanh thoát cho không gian phòng ngủ.", 
+                    "Giường thông minh với ngăn kéo dưới gầm giúp tận dụng tối đa diện tích phòng ngủ. Phần ngăn kéo rộng rãi có thể cất giữ chăn màn, quần áo hoặc đồ dùng cá nhân, giúp phòng ngủ luôn gọn gàng. Một số mẫu giường còn được thiết kế với cơ chế nâng giường, giúp việc lấy đồ dễ dàng hơn. Khung giường làm từ gỗ tự nhiên hoặc MDF chống ẩm, đảm bảo độ bền và tính thẩm mỹ lâu dài. Đây là lựa chọn lý tưởng cho những không gian nhỏ hoặc những gia đình cần tối ưu hóa không gian lưu trữ.", 
+                    "Lấy cảm hứng từ phong cách tối giản của người Nhật, giường này có thiết kế thấp, gần mặt đất, mang lại cảm giác thư thái và rộng rãi cho không gian. Được làm từ gỗ tự nhiên như gỗ thông hoặc gỗ sồi, chiếc giường có vẻ ngoài giản dị nhưng thanh lịch. Không có đầu giường cầu kỳ, giúp tăng không gian cho căn phòng và tạo cảm giác dễ chịu. Đây là một lựa chọn tuyệt vời cho những ai yêu thích sự nhẹ nhàng, tinh tế và không gian sống thoải mái."]
             }
         ],
         review: [
@@ -271,3 +275,61 @@ const suggestProduct = [
         sold: "800"
     }
 ]
+
+router.get('/orders', (req, res)=>{
+    res.json(orders)
+})
+
+router.get('/orders/:id', (req, res)=>{
+    const orderId = parseInt(req.params.id);
+    const order = orders.find(o => o.id === orderId);
+
+    if (order) {
+        res.json(order);
+    }
+    else {
+        res.status(404).json({ message: 'Order not found' });
+    }
+})
+
+router.get('/suggest-products', (req, res) => {
+    res.json(suggestProduct);
+})
+
+// Fetch product details by ID
+router.get('/suggest-products/:id', (req, res) => {
+    const productId = parseInt(req.params.id);
+    const product = orders.find(item => item.id === productId);
+
+    if (product) {
+        res.json(product);  // Send product details as JSON
+    } else {
+        res.status(404).json({ message: "Product not found" });  // If the product doesn't exist
+    }
+});
+
+
+const app = express();
+const port = 3000;
+
+app.use('/api', router);
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+})
+
+fetch('http://localhost:3000/api/orders')
+.then(response => response.json())
+.then(data => {
+    // Hiển thị dữ liệu lên giao diện
+    const productList = document.getElementById('product-list');
+    data.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+            <h3>${product.name}</h3>
+            <p>Price: $${product.price}</p>
+            <p>${product.description}</p>
+        `;
+        productList.appendChild(productDiv); 
+    });
+});

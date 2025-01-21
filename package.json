@@ -1,10 +1,14 @@
 {
   "dependencies": {
+    "express": "^4.21.2",
+    "jsdom": "^26.0.0",
+    "nodemon": "^3.1.9",
     "sass": "^1.81.0"
   },
   "scripts": {
     "sass": "sass --watch scss:css",
     "start": "node index.js",
     "dev": "nodemon index.js"
-  }
+  },
+  "type": "module"
 }
