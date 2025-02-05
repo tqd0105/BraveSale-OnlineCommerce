@@ -816,7 +816,6 @@ quantityRemainBarTopElementsForTablet.forEach((element, index) => {
   if (numberDisplay) {
     numberDisplay.textContent = randomWidthValue; // Gán số hiển thị bằng randomWidthValue
   }
-  console.log(randomWidthValue);
 });
 
 // EXPAND SUGGEST GOODS
@@ -849,10 +848,8 @@ viewMoreButton.addEventListener("click", (e) => {
 
 // CATEGORY HANDLECLICK 
 const categoryControlBarElement = document.querySelector(".main__right-control-bar-forMobile-item.category-click");
-console.log(categoryControlBarElement);
 
 const categoryElement = document.querySelector(".main__left");
-console.log(categoryElement);
 
 categoryControlBarElement.addEventListener("click", () => {
   categoryElement.style.display = "block";
@@ -934,3 +931,46 @@ languageEN.addEventListener("click", () => {
   languageEN.style.display = "none";
   languageVN.style.display = "flex";
 })
+
+// ...
+document.addEventListener("DOMContentLoaded", function () {
+  const alertClickElement = document.querySelector(".main__right-alert");
+  const closeAlertElements = document.querySelectorAll(".close-alert");
+
+  closeAlertElements.forEach((close) => {
+    close.addEventListener("click", () => {
+      alertClickElement.classList.add("hidden");
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    const clickedProduct = event.target.closest(
+      ".main__right-product-item, .main__right-topDeal-products-item, .main__right-flashSale-product-item, .main__right-topBrand-product-item, .main__right-topForeignGoods-products-item, .main__right-suggest-product-item"
+    );
+
+    if (!clickedProduct) return;
+
+    const container = clickedProduct.closest(
+      ".main__right-forYou-product-list, .main__right-topDeal-products, .main__right-flashSale-products, .main__right-topBrand-products, .main__right-topForeignGoods-products, .main__right-suggest-product"
+    );
+
+    if (!container) return;
+
+    const products = container.querySelectorAll(
+      ".main__right-product-item, .main__right-topDeal-item, .main__right-flashSale-item"
+    );
+
+    const firstProduct = products[0];
+
+    if (clickedProduct === firstProduct) {
+      location.href = "./pages/detail.html";
+    } else {
+      alertClickElement.classList.remove("hidden");
+    }
+  });
+});
+
+
+
+
+

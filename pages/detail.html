@@ -1,13 +1,3182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="product-list"></div>
-    
-    <script  src="../js/detail.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BraveSale</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/grid.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/detail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/assets/images/header/BRAVEBUY_logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit&family=Pridi:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body >
+    <header style="background-color: white">
+      <div class="container col l-12">
+        <div class="header__top">
+          <!-- Logo Shop -->
+          <div class="header__top-logo hidden-mobile hidden-tablet">
+            <a href="/index.html">
+              <img
+                src="/assets/images/header/BRAVEBUY_LogoSlogan.png"
+                alt="BraveSale"
+                class="header__top-logo-img"
+              />
+            </a>
+          </div>
+
+          <div
+            class="header__top-logo hidden-mobile hidden-tablet hidden-laptop"
+          >
+            <a href="/index.html">
+              <img
+                src="/assets/images/header/BRAVEBUY_logo.png"
+                alt="BraveSale"
+                class="header__top-logo-img"
+              />
+            </a>
+          </div>
+
+          <div
+            class="header__top-categoryIcon-forTablet hidden-mobile hidden-laptop"
+          >
+            <img
+              src="/assets/images/main/ForMobile/cart/list.png"
+              alt="BraveSale"
+              class="header__top-categoryIcon-forTablet-img"
+              width="30px"
+              height="30px"
+            />
+          </div>
+          <!-- Search Input -->
+          <div class="header__top-search">
+            <input
+              type="text"
+              placeholder="Search"
+              class="header__top-search-input"
+            />
+            <a>
+              <img
+                src="/assets/images/header/search.png"
+                alt="Search"
+                width="20px"
+                height="20px"
+                class="header__top-search-icon hidden-mobile hidden-tablet"
+              />
+            </a>
+            <a>
+              <img
+                src="/assets/images/header/searchForMobile.png"
+                alt="Search"
+                width="25px"
+                height="25px"
+                class="header__top-search-icon-mobile hidden-laptop hidden-tablet"
+              />
+            </a>
+            <div class="header__top-logo hidden-laptop hidden-tablet">
+              <a href="/index.html">
+                <img
+                  src="/assets/images/header/BRAVEBUY_logo.png"
+                  alt="BraveSale"
+                  class="header__top-logo-img"
+                />
+              </a>
+            </div>
+            <div class="header__top-logo-home hidden-mobile hidden-laptop">
+              <a href="/index.html">
+                <img
+                  src="/assets/images/header/BRAVEBUY_logo.png"
+                  alt="BraveSale"
+                  class="header__top-logo-home-img"
+                  width="25px"
+                  height="25px"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- Notification -->
+          <div class="header__top-notification">
+            <div class="header__top-notification-container">
+              <img
+                src="/assets/images/header/notification-bell.png"
+                alt="Notification"
+                width="20px"
+                height="20px"
+              />
+              <span class="header__top-notification-text hidden-mobile"
+                >Thông báo</span
+              >
+            </div>
+            <div class="header__top-notification-dropdown">
+              <div class="header__top-notification-dropdown-item">
+                <div class="header__top-notification-dropdown-item-info">
+                  <img
+                    src="/assets/images/header/iphone_16_pro_max.png"
+                    alt="Notification"
+                    width="40px"
+                    height="40px"
+                    class="header__top-notification-dropdown-item-img"
+                  />
+                  <div
+                    class="header__top-notification-dropdown-item-text-content"
+                  >
+                    <span class="header__top-notification-dropdown-item-title"
+                      >Nhận ngay ưu đãi sốc khi mua iPhone 16 Pro Max tại
+                      BraveSale</span
+                    >
+                    <span
+                      class="header__top-notification-dropdown-item-description"
+                    >
+                      Bạn đã nhận được voucher giảm 10% khi mua iPhone 16 Pro
+                      Max tại BraveSale vào ngày 11/11. Bấm xem thêm để biết
+                      thêm chi tiết</span
+                    >
+                  </div>
+                </div>
+                <div class="header__top-notification-dropdown-item-btn">
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/check.png"
+                      alt="Arrow Right"
+                      width="20px"
+                      height="20px"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/trash.png"
+                      alt="Close"
+                      width="20px"
+                      height="20px"
+                      class="delete-noti"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header__top-notification-dropdown-item">
+                <div class="header__top-notification-dropdown-item-info">
+                  <img
+                    src="/assets/images/header/iphone_16_pro_max.png"
+                    alt="Notification"
+                    width="40px"
+                    height="40px"
+                    class="header__top-notification-dropdown-item-img"
+                  />
+                  <div
+                    class="header__top-notification-dropdown-item-text-content"
+                  >
+                    <span class="header__top-notification-dropdown-item-title"
+                      >Nhận ngay ưu đãi sốc khi mua iPhone 16 Pro Max tại
+                      BraveSale</span
+                    >
+                    <span
+                      class="header__top-notification-dropdown-item-description"
+                    >
+                      Bạn đã nhận được voucher giảm 10% khi mua iPhone 16 Pro
+                      Max tại BraveSale vào ngày 11/11. Bấm xem thêm để biết
+                      thêm chi tiết</span
+                    >
+                  </div>
+                </div>
+                <div class="header__top-notification-dropdown-item-btn">
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/check.png"
+                      alt="Arrow Right"
+                      width="20px"
+                      height="20px"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/trash.png"
+                      alt="Close"
+                      width="20px"
+                      height="20px"
+                      class="delete-noti"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header__top-notification-dropdown-item">
+                <div class="header__top-notification-dropdown-item-info">
+                  <img
+                    src="/assets/images/header/iphone_16_pro_max.png"
+                    alt="Notification"
+                    width="40px"
+                    height="40px"
+                    class="header__top-notification-dropdown-item-img"
+                  />
+                  <div
+                    class="header__top-notification-dropdown-item-text-content"
+                  >
+                    <span class="header__top-notification-dropdown-item-title"
+                      >Nhận ngay ưu đãi sốc khi mua iPhone 16 Pro Max tại
+                      BraveSale</span
+                    >
+                    <span
+                      class="header__top-notification-dropdown-item-description"
+                    >
+                      Bạn đã nhận được voucher giảm 10% khi mua iPhone 16 Pro
+                      Max tại BraveSale vào ngày 11/11. Bấm xem thêm để biết
+                      thêm chi tiết</span
+                    >
+                  </div>
+                </div>
+                <div class="header__top-notification-dropdown-item-btn">
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/check.png"
+                      alt="Arrow Right"
+                      width="20px"
+                      height="20px"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/trash.png"
+                      alt="Close"
+                      width="20px"
+                      height="20px"
+                      class="delete-noti"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header__top-notification-dropdown-item">
+                <div class="header__top-notification-dropdown-item-info">
+                  <img
+                    src="/assets/images/header/iphone_16_pro_max.png"
+                    alt="Notification"
+                    width="40px"
+                    height="40px"
+                    class="header__top-notification-dropdown-item-img"
+                  />
+                  <div
+                    class="header__top-notification-dropdown-item-text-content"
+                  >
+                    <span class="header__top-notification-dropdown-item-title"
+                      >Nhận ngay ưu đãi sốc khi mua iPhone 16 Pro Max tại
+                      BraveSale</span
+                    >
+                    <span
+                      class="header__top-notification-dropdown-item-description"
+                    >
+                      Bạn đã nhận được voucher giảm 10% khi mua iPhone 16 Pro
+                      Max tại BraveSale vào ngày 11/11. Bấm xem thêm để biết
+                      thêm chi tiết</span
+                    >
+                  </div>
+                </div>
+                <div class="header__top-notification-dropdown-item-btn">
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/check.png"
+                      alt="Arrow Right"
+                      width="20px"
+                      height="20px"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="/assets/images/header/trash.png"
+                      alt="Close"
+                      width="20px"
+                      height="20px"
+                      class="delete-noti"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Account Info -->
+          <div class="header__top-account hidden-mobile">
+            <div class="header__top-account-avatar">
+              <img
+                src="/assets/images/header/user.png"
+                alt="Account"
+                width="20px"
+                height="20px"
+              />
+              <span class="header__top-account-text">Tài khoản</span>
+            </div>
+            <div class="header__top-account-dropdown">
+              <a
+                href="/pages/account.html"
+                class="header__top-account-dropdown-item"
+              >
+                <div>
+                  <img
+                    src="/assets/images/header/user.png"
+                    alt="Account"
+                    width="20px"
+                    height="20px"
+                    class="header__top-account-dropdown-item-icon"
+                  />
+                  Thông tin tài khoản
+                </div>
+                <img
+                  src="/assets/images/header/right-arrow.png"
+                  alt="Arrow Right"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon-right"
+                />
+              </a>
+              <a href="./cart.html" class="header__top-account-dropdown-item">
+                <img
+                  src="/assets/images/header/orders.png"
+                  alt="Order"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon"
+                />
+                Đơn hàng của tôi
+                <img
+                  src="/assets/images/header/right-arrow.png"
+                  alt="Arrow Right"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon-right"
+                />
+              </a>
+              <a href="#" class="header__top-account-dropdown-item">
+                <img
+                  src="/assets/images/header/customer-service.png"
+                  alt="Support"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon"
+                />
+                Trung tâm hỗ trợ
+                <img
+                  src="/assets/images/header/right-arrow.png"
+                  alt="Arrow Right"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon-right"
+                />
+              </a>
+              <a href="#" class="header__top-account-dropdown-item">
+                <img
+                  src="/assets/images/header/logout.png"
+                  alt="Logout"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon"
+                />
+                Đăng xuất
+                <img
+                  src="/assets/images/header/right-arrow.png"
+                  alt="Arrow Right"
+                  width="20px"
+                  height="20px"
+                  class="header__top-account-dropdown-item-icon-right"
+                />
+              </a>
+            </div>
+            <div
+              class="main__account-menu-forTablet hidden-laptop hidden-mobile"
+            >
+              <div class="main__account-menu-heading">
+                <div class="main__account-menu-heading-avatar">
+                  <img
+                    src="/assets/images/account/avatar.png"
+                    width="40px"
+                    height="40px"
+                    alt="account"
+                  />
+                  <span class="main__account-menu-heading-text-container">
+                    Tài khoản của tôi
+                    <br />
+                    <a
+                      href="./pages/account.html"
+                      class="main__account-menu-heading-text"
+                      >Nguyễn Văn A</a
+                    >
+                  </span>
+                </div>
+                <div
+                  class="main__account-menu-heading-rightArrow-icon hidden-laptop hidden-tablet"
+                >
+                  <img
+                    src="../assets/images/main/ForMobile/account/right-arrow.png"
+                    width="25px"
+                    height="25px"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="main__account-menu-item">
+                <div
+                  class="main__account-menu-item-content account-info main__account-menu-item-content-choosed"
+                >
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/user.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a
+                      href="./pages/account.html"
+                      class="main__account-menu-item-content-text"
+                      >Thông tin tài khoản</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/password.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Đổi mật khẩu</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/gps.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Địa chỉ</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/order.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Quản lý đơn hàng</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/atm-card.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Phương thức thanh toán</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/dollar.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Brave Xu</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/coupon.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Kho voucher</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/eye.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Sản phẩm đã xem</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/love.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Sản phẩm yêu thích</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="main__account-menu-item-content">
+                  <div class="flexStart">
+                    <img
+                      src="/assets/images/account/technical-support.png"
+                      width="20px"
+                      height="20px"
+                      alt="account"
+                    />
+                    <a href="#" class="main__account-menu-item-content-text"
+                      >Hỗ trợ khách hàng</a
+                    >
+                  </div>
+                  <div class="hidden-laptop hidden-tablet">
+                    <img
+                      src="/assets/images/main/ForMobile/account/right-chevron.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="main__account-menu-item-content-button hidden-laptop"
+                >
+                  <button>Đăng xuất</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Language -->
+          <div
+            class="header__top-language hidden-mobile hidden-tablet"
+            style="cursor: pointer"
+          >
+            <div class="header__top-language-first">
+              <img
+                src="/assets/images/header/usa_flag.png"
+                alt="Language"
+                width="20px"
+                height="20px"
+                class="header__top-language-img"
+              />
+              <span class="header__top-language-text">EN</span>
+            </div>
+            <div class="header__top-language-second">
+              <img
+                src="/assets/images/header/vietnam_flag.png"
+                alt="Language"
+                width="20px"
+                height="20px"
+                class="header__top-language-img"
+              />
+              <span class="header__top-language-text">VI</span>
+            </div>
+          </div>
+
+          <!-- Download App -->
+          <div class="header__top-download-app hidden-mobile">
+            <img
+              src="/assets/images/header/download.png"
+              alt="App Store"
+              width="20px"
+              height="20px"
+            />
+            <span class="header__top-download-app-text">Download</span>
+            <div class="header__top-download-app-dropdown">
+              <img
+                src="/assets/images/header/QR_template.png"
+                width="180px"
+                height="150px"
+                alt="App Store"
+                class="header__top-download-app-dropdown-qr"
+              />
+              <div class="header__top-download-app-dropdown-note">
+                <div class="header__top-download-app-dropdown-text">
+                  Available on
+                </div>
+                <div class="header__top-download-app-dropdown-img-container">
+                  <img
+                    src="/assets/images/header/google-play.png"
+                    width="20px"
+                    height="20px"
+                    alt="Google Play"
+                    class="header__top-download-app-dropdown-img"
+                  />
+                  <img
+                    src="/assets/images/header/app-store.png"
+                    width="20px"
+                    height="20px"
+                    alt="App Store"
+                    class="header__top-download-app-dropdown-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cart Icon -->
+          <div class="header__top-cart-container">
+            <a href="/pages/cart.html" class="header__top-cart">
+              <img
+                src="/assets/images/header/cart.png"
+                alt="Cart"
+                width="20px"
+                height="20px"
+              />
+            </a>
+            <span class="header__top-cart-quantity">5</span>
+          </div>
+        </div>
+        <div class="header__bottom hidden-mobile hidden-tablet">
+          <div class="header__bottom-quickSearch">
+            <a href="#" class="header__bottom-quickSearch-item">Sách</a>
+            <a href="#" class="header__bottom-quickSearch-item">Điện thoại</a>
+            <a href="#" class="header__bottom-quickSearch-item">Thể thao</a>
+            <a href="#" class="header__bottom-quickSearch-item">Điện tử</a>
+            <a href="#" class="header__bottom-quickSearch-item">Thời trang</a>
+            <a href="#" class="header__bottom-quickSearch-item">Đồ gia dụng</a>
+            <a href="#" class="header__bottom-quickSearch-item"
+              >Thiết bị điện tử</a
+            >
+            <a href="#" class="header__bottom-quickSearch-item">Máy tính</a>
+          </div>
+          <div
+            class="header__bottom-contact-hotline hidden-mobile hidden-tablet"
+          >
+            <div class="header__bottom-contact-hotline-call">
+              <img
+                src="../assets/images/main/call.png"
+                width="20px"
+                height="20px"
+                alt="Call Icon"
+              />
+              <span class="header__bottom-contact-hotline-call-text"
+                >1800 6969</span
+              >
+            </div>
+            <div class="header__bottom-contact-hotline-mail">
+              <img
+                src="../assets/images/main/mail.png"
+                width="20px"
+                height="20px"
+                alt="Call Icon"
+              />
+              <span class="header__bottom-contact-hotline-mail-text"
+                >bravesale@onlineshop.vn</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main >
+      <div class="grid wide" >
+        <div class="row" >
+          <div class="col l-9 c-12" >
+            <div class="row"  >
+              <div class="main__detail-left col l-4 c-12">
+                <div class="main__detail-left-img" id="mainImg">
+                  <img src="../assets/images/detail/bed-product.png" alt="" />
+                </div>
+                <div class="main__detail-left-img-preview-list">
+                  <div
+                    class="main__detail-left-img-preview-list-item product-choosed"
+                    onclick="changeImage('../assets/images/detail/bed-product-left.png')"
+                    >
+                    <img
+                      src="../assets/images/detail/bed-product-left.png"
+                      alt=""
+                      width="60px"
+                      height="60px"
+                    />
+                  </div>
+                  <div class="main__detail-left-img-preview-list-item"
+                  onclick="changeImage('../assets/images/detail/bed-product-right.png')"
+                  >
+                    <img
+                      src="../assets/images/detail/bed-product-right.png"
+                      alt=""
+                      width="60px"
+                      height="60px"
+                    />
+                  </div>
+                  <div class="main__detail-left-img-preview-list-item"
+                  onclick="changeImage('../assets/images/detail/bed-product-top.png')"
+                  >
+                    <img
+                      src="../assets/images/detail/bed-product-top.png"
+                      alt=""
+                      width="60px"
+                      height="60px"
+                    />
+                  </div>
+                  <div class="main__detail-left-img-preview-list-item"
+                  onclick="changeImage('../assets/images/detail/bed-product-left-duplicated.png')"
+                  >
+                    <img
+                      src="../assets/images/detail/bed-product-left-duplicated.png"
+                      alt=""
+                      width="60px"
+                      height="60px"
+                    />
+                  </div>
+                  <div class="main__detail-left-img-preview-list-item"
+                  onclick="changeImage('../assets/images/detail/bed-product-right-duplicated.png')"
+                  >
+                    <img
+                      src="../assets/images/detail/bed-product-right-duplicated.png"
+                      alt=""
+                      width="60px"
+                      height="60px"
+                    />
+                  </div>
+                </div>
+                <div class="main__detail-left-highlight-feature-list">
+                  <div class="main__detail-left-img-preview-list-title">
+                    <h3>Đặc điểm nổi bật</h3>
+                  </div>
+                  <div class="main__detail-left-highlight-feature-list-item">
+                    <img
+                      src="../assets/images/detail/check.png"
+                      alt=""
+                      width="15px"
+                      height="15px"
+                    />
+                    <span
+                      >Chất liệu gỗ tự nhiên nguyên khối tạo cảm giác sang
+                      trọng, bền bỉ</span
+                    >
+                  </div>
+                  <div class="main__detail-left-highlight-feature-list-item">
+                    <img
+                      src="../assets/images/detail/check.png"
+                      alt=""
+                      width="15px"
+                      height="15px"
+                    />
+                    <span
+                      >Đèn đổi màu, cảm biến ánh sáng giúp tạo không gian thư
+                      giãn.</span
+                    >
+                  </div>
+                  <div class="main__detail-left-highlight-feature-list-item">
+                    <img
+                      src="../assets/images/detail/check.png"
+                      alt=""
+                      width="15px"
+                      height="15px"
+                    />
+                    <span
+                      >Tận dụng không gian để đựng chăn, gối hoặc quần áo.</span
+                    >
+                  </div>
+                </div>
+                <div class="main__detail-left-button">
+                  <span>Xem thêm</span>
+                </div>
+              </div>
+              <div class="main__detail-center col l-8 c-12">
+                <!-- Info Product -->
+                <div class="main__detail-center-info-product">
+                  <div class="main__detail-center-info-product-label">
+                    <img
+                      src="../assets/images/detail/freeshipXtra.png"
+                      width="100px"
+                      height="20px"
+                      alt=""
+                    />
+                    <img
+                      src="../assets/images/detail/30ngaydoitra.png"
+                      width="100px"
+                      height="20px"
+                      alt=""
+                    />
+                    <img
+                      src="../assets/images/detail/chinhhang.png"
+                      width="90px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="main__detail-center-info-product-brand">
+                    <p>Thương hiệu:</p>
+                    <span>GoodNight</span>
+                  </div>
+                  <div class="main__detail-center-info-product-name">
+                    Giường Ngủ Annibale Colombo - Hàng nhập khẩu Tây Ban Nha
+                  </div>
+                  <div class="main__detail-center-info-product-rating">
+                    <div class="main__detail-center-info-product-rating-star">
+                      <span>4.9</span>
+                      <div
+                        class="main__detail-center-info-product-rating-star-icon"
+                      >
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="main__detail-center-info-product-rating-quantity"
+                      >
+                        <span>(1000</span>
+                        <span>Đánh giá)</span>
+                      </div>
+                    </div>
+                    <div class="main__detail-center-info-product-sold">
+                      <p>Đã bán:</p>
+                      <span>1k</span>
+                    </div>
+                  </div>
+                  <div class="main__detail-center-info-product-price">
+                    <span class="main__detail-center-info-product-price-new">
+                      $1894.48
+                    </span>
+                    <span
+                      class="main__detail-center-info-product-price-discountRate"
+                    >
+                      0.29%
+                    </span>
+                    <div
+                      class="main__detail-center-info-product-price-old-container"
+                    >
+                      <img
+                        src="../assets/images/detail/coupon.png"
+                        width="20px"
+                        height="20px"
+                        alt=""
+                      />
+                      <span class="main__detail-center-info-product-price-old">
+                        $1899.99
+                      </span>
+                    </div>
+                  </div>
+                  <div class="main__detail-center-info-product-discountSuggest">
+                    <span>Mã giảm giá</span>
+                    <ul
+                      class="main__detail-center-info-product-discountSuggest-list"
+                    >
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Giảm 10%
+                      </li>
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Freeship 0đ
+                      </li>
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Giảm 15%
+                      </li>
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Giảm 6k
+                      </li>
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Giảm 20k
+                      </li>
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Giảm 8k
+                      </li>
+                      <li
+                        class="main__detail-center-info-product-discountSuggest-item"
+                      >
+                        Freeship 15k
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="main__detail-center-info-product-award">
+                    <div class="main__detail-center-info-product-award-item">
+                      <img
+                        src="../assets/images/detail/cup.png"
+                        width="20px"
+                        height="20px"
+                        alt=""
+                      />
+                      <span>Top 1 chất lượng</span>
+                    </div>
+                    <div class="main__detail-center-info-product-award-item">
+                      <img
+                        src="../assets/images/detail/medal.png"
+                        width="20px"
+                        height="20px"
+                        alt=""
+                      />
+                      <span>Top 3 bán chạy</span>
+                    </div>
+                    <div class="main__detail-center-info-product-award-item">
+                      <img
+                        src="../assets/images/detail/certificate.png"
+                        width="20px"
+                        height="20px"
+                        alt=""
+                      />
+                      <span>Giấy chứng nhận thương hiệu</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Info Customer -->
+                <div class="main__detail-center-info-customer">
+                  <div class="main__detail-center-info-customer-title">
+                    <p>Thông tin vận chuyển</p>
+                  </div>
+                  <div class="main__detail-center-info-customer-info">
+                    <div
+                      class="main__detail-center-info-customer-info-contact-container"
+                    >
+                      <div
+                        class="main__detail-center-info-customer-info-contact"
+                      >
+                        <span
+                          class="main__detail-center-info-customer-info-contact-email"
+                          >Nguyễn Văn A</span
+                        >
+                        <span
+                          class="main__detail-center-info-customer-info-contact-email"
+                          >nva@gmail.com</span
+                        >
+                        <span
+                          class="main__detail-center-info-customer-info-contact-phone"
+                          >0123456789</span
+                        >
+                      </div>
+                      <div
+                        class="main__detail-center-info-customer-info-address"
+                      >
+                        <p>02 Võ Oanh, Phường 25, Quận Bình Thạnh, TP.HCM</p>
+                      </div>
+                      <span class="main__detail-center-info-customer-info-edit"
+                        >Chỉnh sửa</span
+                      >
+                    </div>
+                    <div
+                      class="main__detail-center-info-customer-info-delivery"
+                    >
+                      <div
+                        class="main__detail-center-info-customer-info-delivery-time-list"
+                      >
+                        <div
+                          class="main__detail-center-info-customer-info-delivery-time"
+                        >
+                          <div
+                            class="main__detail-center-info-customer-info-delivery-time-day"
+                          >
+                            <img
+                              src="../assets/images/detail/flash.png"
+                              width="30px"
+                              height="30px"
+                              alt=""
+                            />
+                            <span>Giao siêu tốc</span>
+                          </div>
+                          <div
+                            class="main__detail-center-info-customer-info-delivery-time-detail"
+                          >
+                            <span>Nhận tại nhà: Giao trước 20h, 19/01</span>
+                          </div>
+
+                          <div
+                            class="main__detail-center-info-customer-info-delivery-fee"
+                          >
+                            <img
+                              src="../assets/images/detail/ship-fee.png"
+                              width="20px"
+                              height="20px"
+                              alt=""
+                            />
+                            <div
+                              class="main__detail-center-info-customer-info-delivery-fee-price"
+                            >
+                              <span
+                                class="main__detail-center-info-customer-info-delivery-fee-price-discount currencyConverter"
+                                >18900</span
+                              >
+                              <span
+                                class="main__detail-center-info-customer-info-delivery-fee-price-original currencyConverter"
+                                >11500</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="main__detail-center-info-customer-info-delivery-time"
+                        >
+                          <div
+                            class="main__detail-center-info-customer-info-delivery-time-day"
+                          >
+                            <img
+                              src="../assets/images/detail/fast-delivery.png"
+                              width="30px"
+                              height="30px"
+                              alt=""
+                            />
+                            <span>Giao nhanh</span>
+                          </div>
+                          <div
+                            class="main__detail-center-info-customer-info-delivery-time-detail"
+                          >
+                            <span>Nhận tại nhà: Giao trước 20h, 21/01</span>
+                          </div>
+
+                          <div
+                            class="main__detail-center-info-customer-info-delivery-fee"
+                          >
+                            <img
+                              src="../assets/images/detail/ship-fee.png"
+                              width="20px"
+                              height="20px"
+                              alt=""
+                            />
+                            <div
+                              class="main__detail-center-info-customer-info-delivery-fee-price"
+                            >
+                              <span
+                                class="main__detail-center-info-customer-info-delivery-fee-price-discount currencyConverter"
+                                >18900</span
+                              >
+                              <span
+                                class="main__detail-center-info-customer-info-delivery-fee-price-original currencyConverter"
+                                >11500</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="main__detail-center-info-customer-info-delivery-fee-voucher"
+                      >
+                        <img
+                          src="../assets/images/detail/free.png"
+                          width="40px"
+                          height="40px"
+                          alt=""
+                        />
+                        <div
+                          class="main__detail-center-info-customer-info-delivery-fee-voucher-content"
+                        >
+                          <span
+                            >Freeship 20k cho đơn từ 100k, Freeship 30k cho đơn
+                            từ 250k</span
+                          >
+                          <img
+                            src="../assets/images/detail/info.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Options Good -->
+                <div class="main__detail-center-options">
+                  <div class="main__detail-center-options-title-wrapper">
+                    <span class="main__detail-center-options-title"
+                      >Lựa chọn</span
+                    >
+                  </div>
+                  <div class="main__detail-center-options-type">
+                    <!-- <span>Lựa chọn</span> -->
+                    <ul class="main__detail-center-options-list">
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-left-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Trắng - 1m2"
+                        />
+                        <span>Trắng - 1m2</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-right-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Trắng - 1m4"
+                        />
+                        <span>Trắng - 1m4</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Trắng - 1m6"
+                        />
+                        <span>Trắng - 1m6</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-right-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Xanh Dương - 1m4"
+                        />
+                        <span>Xanh Dương - 1m4</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-left-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Xanh Dương - 1m6"
+                        />
+                        <span>Xanh Dương - 1m6</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Xám - 1m2"
+                        />
+                        <span>Xám - 1m2</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-left-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Xám - 1m4"
+                        />
+                        <span>Xám - 1m4</span>
+                      </li>
+                      <li class="main__detail-center-options-list-item">
+                        <img
+                          src="../assets/images/detail/bed-product-right-size.png"
+                          width="30px"
+                          height="30px"
+                          alt="Xám - 1m6"
+                        />
+                        <span>Xám - 1m6</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="main__detail-center-options-quantity">
+                    <span>+</span>
+                    <p>1</p>
+                    <span>-</span>
+                  </div>
+                </div>
+
+                <!-- Suggest Product -->
+                <div class="main__detail-center-suggest-product">
+                  <div class="main__detail-center-suggest-product-heading">
+                    <p>Sản phẩm đề xuất</p>
+                  </div>
+                  <div
+                    class="main__detail-center-suggest-product-container row"
+                  >
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/sofa.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Ghế sofa da cao cấp chống trầy S-904</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-90.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        1500000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/tudung.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Bộ bàn ăn mini hiện đại ES521 - Màu trắng</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-70.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        5200000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/tutrangtri.png"
+                        width="120px"
+                        height="120px"
+                        alt=""
+                        class="main__detail-center-suggest-product-img"
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Tủ trang trí phòng khách thiết kế hiện đại</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-50.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        15000000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/bed-sgp.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Giường ngủ gỗ có ngăn kéo thiết kế hiện đại</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-70.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        25990000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/bantra.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Bàn phòng cách gỗ thiết kế hiện đại</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        2300000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/banlamviec.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Bàn làm việc chữ L có ngăn kéo - BB5S2</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-70.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        625000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/denmam.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Đèn mâm ốp trần 7 chế độ - Hàng mới</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-90.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        125000000
+                      </span>
+                    </div>
+                    <div
+                      class="main__detail-center-suggest-product-item col l-3"
+                    >
+                      <img
+                        src="../assets/images/detail/nemcaosu.png"
+                        width="120px"
+                        height="120px"
+                        class="main__detail-center-suggest-product-img"
+                        alt=""
+                      />
+
+                      <div class="main__detail-center-suggest-product-title">
+                        <p>Nệm cao su chất liệu co dãn hiện đại nhất</p>
+                      </div>
+                      <span class="main__detail-center-suggest-product-rating">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star-none-70.png"
+                          width="15px"
+                          height="15px"
+                          alt=""
+                        />
+                      </span>
+                      <div class="main__detail-center-suggest-product-voucher">
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Rẻ vô địch</span>
+                        </div>
+                        <div
+                          class="main__detail-center-suggest-product-voucher-item"
+                        >
+                          <span>Giảm 20k</span>
+                        </div>
+                      </div>
+                      <span class="main__detail-center-suggest-product-price currencyConverter">
+                        3500000
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Info Warranty -->
+                <div class="main__detail-center-info-warranty">
+                  <div class="main__detail-center-info-warranty-title">
+                    <p>Thông tin bảo hành</p>
+                  </div>
+                  <div class="main__detail-center-info-warranty-content">
+                    <div class="main__detail-center-info-warranty-content-item">
+                      <p>Thời hạn bảo hành:</p>
+                      <span>12 tháng</span>
+                    </div>
+                    <div class="main__detail-center-info-warranty-content-item">
+                      <p>Phương thức bảo hành:</p>
+                      <span>Đổi mới</span>
+                    </div>
+                    <div class="main__detail-center-info-warranty-content-item">
+                      <p>Chính sách bảo hành:</p>
+                      <span>Đổi mới trong 30 ngày</span>
+                    </div>
+                    <div class="main__detail-center-info-warranty-content-item">
+                      <p>Lưu ý:</p>
+                      <span
+                        class="main__detail-center-info-warranty-content-note-link"
+                        >Xem thêm</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Info Detail -->
+                <div class="main__detail-center-info-detail">
+                  <div class="main__detail-center-info-detail-title">
+                    <p>Thông tin chi tiết</p>
+                  </div>
+                  <div class="main__detail-center-info-detail-content">
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Thương hiệu:</p>
+                      <span>GoodNight</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Xuất xứ thương hiệu:</p>
+                      <span>Trung Quốc</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Model:</p>
+                      <span>ANB2025</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Kích thước:</p>
+                      <span>100cm x 200cm x 30cm</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Đơn vị phân phối:</p>
+                      <span>BIGSPACE</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Chất liệu:</p>
+                      <span>Gỗ</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Kho:</p>
+                      <span>A921</span>
+                    </div>
+                    <div class="main__detail-center-info-detail-content-item">
+                      <p>Trọng lượng:</p>
+                      <span>12kg</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Info Description -->
+                <div class="main__detail-center-info-description">
+                  <div class="main__detail-center-info-description-title">
+                    <p>Mô tả sản phẩm</p>
+                  </div>
+                  <div class="main__detail-center-info-description-content">
+                    <h3
+                      class="main__detail-center-info-description-content-title"
+                    >
+                      Sự kết hợp hoàn hảo giữa nghệ thuật và công nghệ
+                    </h3>
+                    <p>
+                      - Trong thế giới hiện đại, công nghệ không chỉ đơn thuần
+                      là một công cụ mà còn là một phần không thể thiếu của nghệ
+                      thuật. Sản phẩm này được tạo ra với sự kết hợp tinh tế
+                      giữa kỹ thuật tiên tiến và thiết kế đầy sáng tạo, mang đến
+                      trải nghiệm thị giác ấn tượng. Từng đường nét, từng chi
+                      tiết đều phản ánh sự khéo léo của những nhà thiết kế hàng
+                      đầu, tạo nên một tổng thể hoàn hảo. Khi sử dụng sản phẩm
+                      này, bạn không chỉ cảm nhận được sức mạnh của công nghệ mà
+                      còn thấy được vẻ đẹp của sự tinh tế. Đó chính là sự giao
+                      thoa giữa trí tuệ nhân tạo và cảm hứng sáng tạo của con
+                      người.
+                    </p>
+                    <div
+                      class="main__detail-center-info-description-content-img"
+                    >
+                      <img
+                        src="../assets/images/detail/description-img-1.png"
+                        alt="Nghệ thuật và công nghệ"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="main__detail-center-info-description-content">
+                    <h3
+                      class="main__detail-center-info-description-content-title"
+                    >
+                      Trải nghiệm chưa từng có với thiết kế đột phá
+                    </h3>
+                    <p>
+                      - Thiết kế không chỉ là vẻ bề ngoài mà còn là cách một sản
+                      phẩm tương tác với người dùng. Với những đường nét tối
+                      giản nhưng đầy sang trọng, sản phẩm này mang đến một trải
+                      nghiệm hoàn toàn mới mẻ. Không chỉ đẹp mắt, từng chi tiết
+                      còn được tính toán kỹ lưỡng để mang lại cảm giác thoải mái
+                      khi sử dụng trong thời gian dài. Sự kết hợp hoàn hảo giữa
+                      vật liệu cao cấp và công nghệ hiện đại giúp sản phẩm trở
+                      thành một biểu tượng của sự đổi mới. Khi cầm trên tay, bạn
+                      sẽ cảm nhận được sự khác biệt ngay từ lần đầu tiên.
+                    </p>
+                    <div
+                      class="main__detail-center-info-description-content-img"
+                    >
+                      <img
+                        src="../assets/images/detail/description-img-2.png"
+                        alt="Thiết kế đột phá"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="main__detail-center-info-description-content">
+                    <h3
+                      class="main__detail-center-info-description-content-title"
+                    >
+                      Sức mạnh vượt trội, hiệu suất bùng nổ
+                    </h3>
+                    <p>
+                      - Chúng tôi hiểu rằng tốc độ và hiệu suất là những yếu tố
+                      quan trọng trong cuộc sống hiện đại. Được trang bị công
+                      nghệ tiên tiến nhất, sản phẩm này mang lại khả năng xử lý
+                      mạnh mẽ, giúp bạn hoàn thành công việc nhanh hơn và hiệu
+                      quả hơn. Không chỉ vậy, hệ thống tối ưu hóa thông minh còn
+                      đảm bảo hiệu suất ổn định ngay cả khi sử dụng trong thời
+                      gian dài. Nhờ vào những cải tiến đột phá, bạn có thể thực
+                      hiện nhiều tác vụ cùng lúc mà không gặp bất kỳ trở ngại
+                      nào. Đây chính là người bạn đồng hành lý tưởng giúp bạn
+                      tối ưu hóa năng suất mỗi ngày.
+                    </p>
+                    <div
+                      class="main__detail-center-info-description-content-img"
+                    >
+                      <img
+                        src="../assets/images/detail/description-img-3.png"
+                        alt="Hiệu suất vượt trội"
+                      />
+                    </div>
+                  </div>
+                  <div class="main__detail-center-info-description-wrapper hidden">
+                  <div class="main__detail-center-info-description-content">
+                    <h3
+                      class="main__detail-center-info-description-content-title"
+                    >
+                      An toàn và bền bỉ theo năm tháng
+                    </h3>
+                    <p>
+                      - Sự bền bỉ không chỉ giúp kéo dài tuổi thọ sản phẩm mà
+                      còn mang lại sự an tâm cho người sử dụng. Chúng tôi đã
+                      kiểm định sản phẩm này qua nhiều thử nghiệm khắt khe để
+                      đảm bảo rằng nó có thể hoạt động ổn định trong mọi điều
+                      kiện. Với chất liệu cao cấp và thiết kế chống va đập, bạn
+                      có thể yên tâm sử dụng mà không lo hư hỏng. Không chỉ vậy,
+                      các tính năng bảo mật tiên tiến còn giúp bảo vệ dữ liệu và
+                      thông tin cá nhân của bạn khỏi các rủi ro bên ngoài. Một
+                      sản phẩm không chỉ tốt ở hiện tại mà còn bền bỉ theo thời
+                      gian chính là điều mà chúng tôi hướng tới.
+                    </p>
+                    <div
+                      class="main__detail-center-info-description-content-img"
+                    >
+                      <img
+                        src="../assets/images/detail/description-img-4.png"
+                        alt="Độ bền và an toàn"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="main__detail-center-info-description-content">
+                    <h3
+                      class="main__detail-center-info-description-content-title"
+                    >
+                      Chăm sóc tận tâm, hỗ trợ 24/7
+                    </h3>
+                    <p>
+                      - Chúng tôi không chỉ mang đến một sản phẩm, mà còn mang
+                      đến một cam kết về chất lượng dịch vụ. Đội ngũ hỗ trợ
+                      chuyên nghiệp luôn sẵn sàng giúp bạn giải quyết mọi thắc
+                      mắc bất cứ lúc nào trong ngày. Dù bạn cần hướng dẫn sử
+                      dụng, hỗ trợ kỹ thuật hay tư vấn nâng cấp, chúng tôi luôn
+                      có mặt để giúp đỡ. Sự hài lòng của khách hàng là ưu tiên
+                      hàng đầu của chúng tôi, và mỗi phản hồi của bạn đều là
+                      động lực để chúng tôi không ngừng cải thiện. Với dịch vụ
+                      chăm sóc tận tâm, bạn có thể yên tâm trải nghiệm sản phẩm
+                      mà không phải lo lắng về bất cứ điều gì.
+                    </p>
+                    <div
+                      class="main__detail-center-info-description-content-img"
+                    >
+                      <img
+                        src="../assets/images/detail/description-img-5.png"
+                        alt="Hỗ trợ khách hàng"
+                      />
+                    </div>
+                  </div>
+                  <div class="main__detail-center-info-description-content">
+                    <p>
+                      + Giường được thiết kế với chất liệu cao cấp, mang lại cảm
+                      giác êm ái và dễ chịu. Khung giường chắc chắn giúp nâng đỡ
+                      cơ thể tối ưu suốt đêm dài. Chúng tôi cam kết mang đến
+                      giấc ngủ ngon với chế độ hỗ trợ tận tâm 24/7.
+                    </p>
+                    <p>
+                      + Với thiết kế hiện đại, giường không chỉ đẹp mắt mà còn
+                      giúp bạn thư giãn tối đa. Đệm và khung giường được chọn
+                      lọc kỹ lưỡng để đảm bảo sự êm ái, bền bỉ. Dịch vụ chăm sóc
+                      khách hàng 24/7 luôn sẵn sàng hỗ trợ bất cứ khi nào bạn
+                      cần.
+                    </p>
+                  </div>
+                </div>
+                  <div class="blur-layer" id="blurLayer"></div>
+                </div>
+                <div class="main__detail-center-info-description-button">
+                  <button id="btn-show-more">Xem thêm</button>
+                  <button id="btn-show-less">Thu gọn</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col l-12 c-12">
+                <div class="main__detail-shop row">
+                  <div class="main__detail-shop-info col l-4 c-12">
+                    <div class="main__detail-shop-avatar">
+                      <img
+                        src="../assets/images/detail/LogoShopAPI.png"
+                        width="80px"
+                        height="80px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="main__detail-shop-info-name-container">
+                      <h3>BIGSPACE</h3>
+                      <p>Hoạt động 15 phút trước</p>
+                      <div class="main__detail-shop-info-options">
+                        <div class="main__detail-shop-info-options-chat">
+                          <img
+                            src="../assets/images/detail/chat_vuong.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                          <span>Chat ngay</span>
+                        </div>
+                        <div class="main__detail-shop-info-options-overview">
+                          <img
+                            src="../assets/images/detail/store.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                          <span>Xem shop</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main__detail-shop-quickView col l-8 c-12">
+                    <div class="main__detail-shop-quickView-inner">
+                      <div class="main__detail-shop-quickView-container row">
+                        <div class="main__detail-shop-quickView-item col l-4 c-4">
+                          <p>Đánh giá</p>
+                          <span>5.0</span>
+                        </div>
+                        <div class="main__detail-shop-quickView-item col l-4 c-4">
+                          <p>Tham gia</p>
+                          <span>1 năm</span>
+                        </div>
+                        <div class="main__detail-shop-quickView-item col l-4 c-4">
+                          <p>Tỉ lệ phản hồi</p>
+                          <span>99%</span>
+                        </div>
+                      </div>
+                      <div class="main__detail-shop-quickView-container row">
+                        <div class="main__detail-shop-quickView-item col l-4 c-4">
+                          <p>Sản phẩm</p>
+                          <span>1.3k</span>
+                        </div>
+                        <div class="main__detail-shop-quickView-item col l-4 c-4">
+                          <p>Follower</p>
+                          <span>12.3k</span>
+                        </div>
+                        <div class="main__detail-shop-quickView-item col l-4 c-4">
+                          <p>Phản hồi</p>
+                          <span>Vài phút</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col l-12 c-12">
+                <div class="main__detail-review-overview-container row">
+                  <div class="main__detail-review-overview col l-4 c-12 m-6">
+                    <h3>Đánh giá</h3>
+                    <div class="main__detail-review-overview-rating">
+                      <p>Tổng quan</p>
+                      <div class="main__detail-review-overview-rating-star">
+                        <span>4.7</span>
+                        <div
+                          class="main__detail-review-overview-rating-star-icon"
+                        >
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none-70.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="main__detail-review-overview-quantity">
+                      <p>201 đánh giá</p>
+                    </div>
+                    <div class="main__detail-review-overview-detail">
+                      <div class="main__detail-review-overview-detail-item">
+                        <div
+                          class="main__detail-review-overview-detail-item-star"
+                        >
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-bar"
+                        >
+                          <div
+                            class="main__detail-review-overview-detail-item-bottomBar"
+                          ></div>
+                          <div
+                            class="main__detail-review-overview-detail-item-topBar"
+                          ></div>
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-quantity-reviewer"
+                        >
+                          <span id="reviewerCount"></span>
+                        </div>
+                      </div>
+                      <div class="main__detail-review-overview-detail-item">
+                        <div
+                          class="main__detail-review-overview-detail-item-star"
+                        >
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-bar"
+                        >
+                          <div
+                            class="main__detail-review-overview-detail-item-bottomBar"
+                          ></div>
+                          <div
+                            class="main__detail-review-overview-detail-item-topBar"
+                          ></div>
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-quantity-reviewer"
+                        >
+                          <span id="reviewerCount"></span>
+                        </div>
+                      </div>
+                      <div class="main__detail-review-overview-detail-item">
+                        <div
+                          class="main__detail-review-overview-detail-item-star"
+                        >
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-bar"
+                        >
+                          <div
+                            class="main__detail-review-overview-detail-item-bottomBar"
+                          ></div>
+                          <div
+                            class="main__detail-review-overview-detail-item-topBar"
+                          ></div>
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-quantity-reviewer"
+                        >
+                          <span id="reviewerCount"></span>
+                        </div>
+                      </div>
+                      <div class="main__detail-review-overview-detail-item">
+                        <div
+                          class="main__detail-review-overview-detail-item-star"
+                        >
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-bar"
+                        >
+                          <div
+                            class="main__detail-review-overview-detail-item-bottomBar"
+                          ></div>
+                          <div
+                            class="main__detail-review-overview-detail-item-topBar"
+                          ></div>
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-quantity-reviewer"
+                        >
+                          <span id="reviewerCount"></span>
+                        </div>
+                      </div>
+                      <div class="main__detail-review-overview-detail-item">
+                        <div
+                          class="main__detail-review-overview-detail-item-star"
+                        >
+                          <img
+                            src="../assets/images/detail/star.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                          <img
+                            src="../assets/images/detail/star-none.png"
+                            width="15px"
+                            height="15px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-bar"
+                        >
+                          <div
+                            class="main__detail-review-overview-detail-item-bottomBar"
+                          ></div>
+                          <div
+                            class="main__detail-review-overview-detail-item-topBar"
+                          ></div>
+                        </div>
+                        <div
+                          class="main__detail-review-overview-detail-item-quantity-reviewer"
+                        >
+                          <span id="reviewerCount"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main__detail-review-sumary col l-8 c-12 m-6">
+                    <div class="main__detail-review-sumary-heading">
+                      <img
+                        src="../assets/images/detail/chatbot-ai.png"
+                        width="30px"
+                        height="30px"
+                        alt=""
+                      />
+                      <span>
+                        <a href="#">Trợ lí BraveAI</a>
+                        <span class="hidden-mobile hidden-tablet">Tổng hợp ngắn gọn từ các đánh giá mới nhất</span>
+                      </span>
+                    </div>
+                    <div class="main__detail-review-sumary-inner">
+                      <div class="main__detail-review-sumary-product-container">
+                        <div class="main__detail-review-sumary-product">
+                          <p>Về sản phẩm:</p>
+                          <span>(20 tích cực, 3 tiêu cực)</span>
+                        </div>
+                        <div class="main__detail-review-sumary-product-detail">
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/add.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span
+                              >Giường chắc chắn, thiết kế đẹp và tinh tế.</span
+                            >
+                          </div>
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/add.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span
+                              >Chất liệu gỗ tốt, sơn phủ mịn màng và bóng.</span
+                            >
+                          </div>
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/add.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span>Giá cả hợp lý so với chất lượng</span>
+                          </div>
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/minus.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span>Có một vài vết xước ở một vài chỗ.</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main__detail-review-sumary-service-container">
+                        <div class="main__detail-review-sumary-service">
+                          <p>Về dịch vụ:</p>
+                          <span>(26 tích cực, 12 tiêu cực)</span>
+                        </div>
+                        <div class="main__detail-review-sumary-product-detail">
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/add.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span>Nhân viên tư vấn nhiệt tình.</span>
+                          </div>
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/add.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span>Giao hàng nhanh đóng gói cẩn thận.</span>
+                          </div>
+                          <div
+                            class="main__detail-review-sumary-product-detail-item"
+                          >
+                            <img
+                              src="../assets/images/detail/minus.png"
+                              width="15px"
+                              height="15px"
+                              alt=""
+                            />
+                            <span
+                              >Dịch vụ bảo hành chưa tốt, phản hồi lâu.</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="main__detail-review-sumary-react">
+                      <img
+                        src="../assets/images/detail/like.png"
+                        width="30px"
+                        height="30px"
+                        alt=""
+                      />
+                      <img
+                        src="../assets/images/detail/dislike.png"
+                        width="30px"
+                        height="30px"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col l-12 c-12">
+                <div class="main__detail-comment row">
+                  <div class="main__detail-reviewer col l-4 c-12">
+                    <div class="main__detail-reviewer-info-container">
+                      <div class="main__detail-reviewer-info">
+                        <img
+                          src="../assets/images/detail/avatarMaleAPI.png"
+                          width="60px"
+                          height="60px"
+                          alt=""
+                        />
+                        <div class="main__detail-reviewer-info-name">
+                          <h3>Nguyễn Văn A</h3>
+                          <span>Tham gia 4 năm</span>
+                        </div>
+                      </div>
+                      <img
+                        src="../assets/images/detail/view.png"
+                        width="20px"
+                        height="20px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="main__detail-reviewer-info-recently">
+                      <div class="main__detail-reviewer-info-recently-title">
+                        <div
+                          class="main__detail-reviewer-info-recently-title-icon"
+                        >
+                          <img
+                            src="../assets/images/detail/review.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                          <span>Đã viết: </span>
+                        </div>
+                        <p>20 đánh giá</p>
+                      </div>
+                      <div class="main__detail-reviewer-info-recently-title">
+                        <div
+                          class="main__detail-reviewer-info-recently-title-icon"
+                        >
+                          <img
+                            src="../assets/images/detail/heart.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                          <span>Đã nhận: </span>
+                        </div>
+                        <p>7 lượt tương tác tích cực</p>
+                      </div>
+                    </div>
+                    <div class="main__detail-reviewer-info-content">
+                      <div class="main__detail-reviewer-info-content-time">
+                        <p>Vào lúc:</p>
+                        <span>05-01-2025 | 19h30</span>
+                      </div>
+                      <div class="main__detail-reviewer-info-content-classify">
+                        <p>Phân loại:</p>
+                        <span>Trắng - 1m8</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main__detail-comment-detail col l-8 c-12">
+                    <div class="main__detail-comment-detail-rating">
+                      <div class="main__detail-comment-detail-rating-star">
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="25px"
+                          height="25px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="25px"
+                          height="25px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="25px"
+                          height="25px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="25px"
+                          height="25px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/images/detail/star.png"
+                          width="25px"
+                          height="25px"
+                          alt=""
+                        />
+                      </div>
+                      <span class="main__detail-comment-detail-rating-text"
+                        >Cực kì hài lòng</span
+                      >
+                    </div>
+                    <div class="main__detail-comment-detail-status">
+                      <img
+                        src="../assets/images/detail/check-green.png"
+                        width="25px"
+                        height="25px"
+                        alt=""
+                      />
+                      <span>Mua hàng thành công</span>
+                    </div>
+                    <div class="main__detail-comment-detail-content">
+                      <p>
+                        Sản phẩm chất lượng, giá cả hợp lý. Rất hài lòng với
+                        dịch vụ của shop. Sẽ tiếp tục ủng hộ shop trong tương
+                        lai.
+                      </p>
+                      <div class="main__detail-comment-detail-img">
+                        <img
+                          src="../assets/images/detail/userReview1API.png"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                          class="main__detail-comment-detail-img-item"
+                        />
+                        <img
+                          src="../assets/images/detail/userReview2API.png"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                          class="main__detail-comment-detail-img-item"
+                        />
+                        <video
+                          src="../assets/images/detail/userReviewVideoAPI.mp4"
+                          width="100px"
+                          height="100px"
+                          controls
+                          class="main__detail-comment-detail-img-item"
+                        ></video>
+                      </div>
+                    </div>
+                    <div class="main__detail-comment-detail-interact-container">
+                      <div class="main__detail-comment-detail-interact">
+                        <div class="main__detail-comment-detail-interact-like">
+                          <img
+                            src="../assets/images/detail/like-black.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                          <span>5</span>
+                        </div>
+                        <div class="main__detail-comment-detail-interact-reply">
+                          <img
+                            src="../assets/images/detail/chat.png"
+                            width="25px"
+                            height="25px"
+                            alt=""
+                          />
+                          <span>2</span>
+                        </div>
+                      </div>
+                      <div class="main__detail-comment-detail-interact-share">
+                        <img
+                          src="../assets/images/detail/share.png"
+                          width="25px"
+                          height="25px"
+                          alt=""
+                        />
+                        <span>Chia sẽ </span>
+                      </div>
+                    </div>
+                    <div class="main__detail-comment-detail-replay-fromAdmin">
+                      <div
+                        class="main__detail-comment-detail-replay-fromAdmin-info"
+                      >
+                        <div
+                          class="main__detail-comment-detail-replay-fromAdmin-logo"
+                        >
+                          <img
+                            src="../assets/images/header/BRAVEBUY_logo.png"
+                            width="30px"
+                            height="30px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-comment-detail-replay-fromAdmin-name"
+                        >
+                          <span>Quản trị viên</span>
+                          <img
+                            src="../assets/images/detail/check.png"
+                            width="10px"
+                            height="10px"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="main__detail-comment-detail-replay-fromAdmin-time"
+                        >
+                          <p>1 tháng trước</p>
+                        </div>
+                      </div>
+                      <div
+                        class="main__detail-comment-detail-replay-fromAdmin-detail"
+                      >
+                        <p>
+                          Cảm ơn bạn đã tin tưởng dịch vụ và lựa chọn sản phẩm
+                          của BraveSale nè. Hy vọng những sản phẩm, dịch vụ của BraveSale
+                          sẽ giúp bạn có những trải nghiệm tuyệt vời nhất. Rất
+                          mong bạn sẽ tiếp tục ủng hộ BraveSale trong thời gian tới
+                          ạ.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__detail-right col l-3 c-12">
+            <div class="main__detail-right-shop-info">
+              <div class="main__detail-right-shop-info-inner">
+                <div class="main__detail-right-shop-info-wrapper">
+                  <img
+                    src="../assets/images/detail/LogoShopAPI.png"
+                    alt=""
+                    width="40px"
+                    height="35px"
+                  />
+                  <div class="main__detail-right-shop-info-name">
+                    <h3>BIGSPACE</h3>
+                    <div class="main__detail-right-shop-info-name-hightlight">
+                      <div
+                        class="main__detail-right-shop-info-name-hightlight-label"
+                      >
+                        <img
+                          src="../assets/images/detail/official.png"
+                          alt=""
+                          width="20px"
+                          height="20px"
+                        />
+                        <span>Đã xác minh</span>
+                      </div>
+                      <div
+                        class="main__detail-right-shop-info-name-hightlight-rating"
+                      >
+                        <span>4.7</span>
+                        <img
+                          src="../assets/images/detail/star.png"
+                          alt=""
+                          width="15px"
+                          height="15px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="../assets/images/detail/chat.png"
+                    width="30px"
+                    height="30px"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="main__detail-right-voucher">
+              <div class="main__detail-right-voucher-inner">
+                <img
+                  src="../assets/images/detail/voucher.png"
+                  width="30px"
+                  height="30px"
+                  alt=""
+                />
+                <input type="text" placeholder="Nhập voucher" />
+              </div>
+              <button>Áp dụng</button>
+            </div>
+            <div class="main__detail-right-insurance">
+              <p>Bảo hiểm</p>
+              <div class="main__detail-right-insurance-content">
+                <span>BH bảo vệ người tiêu dùng </span>
+                <img
+                  src="../assets/images/detail/info.png"
+                  width="20px"
+                  height="20px"
+                  alt=""
+                  class="main__detail-right-insurance-content-icon"
+                />
+              </div>
+              <div class="main__detail-right-insurance-detail">
+                <p>
+                  Giúp bạn bảo vệ khỏi các nguy hiểm, thiệt hại gây ra bởi sản
+                  phẩm được bảo hiểm trong quá trình sử dụng
+                </p>
+              </div>
+            </div>
+            <div class="main__detail-right-totalPrice">
+              <p>Tạm tính</p>
+              <span class="currencyConverter">634564</span>
+            </div>
+            <div class="main__detail-right-button">
+              <button>Mua ngay</button>
+              <button>Thêm vào giỏ</button>
+              <button>Mua trả góp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer row">
+        <div class="footer__container col l-3 c-6">
+          <div class="footer__support-heading">
+            <h4 class="footer__support-title">Hỗ trợ khách hàng</h4>
+          </div>
+          <div class="footer__support-item-container">
+            <a href="#" class="footer__support-item"
+              >Hotline:
+              <span class="footer__support-item-text">0909090909</span></a
+            >
+            <a href="#" class="footer__support-item">Trung tâm hỗ trợ</a>
+            <a href="#" class="footer__support-item">Chính sách đổi trả</a>
+            <a href="#" class="footer__support-item">Chính sách bảo mật</a>
+            <a href="#" class="footer__support-item">Chính sách vận chuyển</a>
+            <a href="#" class="footer__support-item">Chính sách thanh toán</a>
+          </div>
+        </div>
+        <div class="footer__container col l-3 c-6">
+          <div class="footer__about-heading">
+            <h4 class="footer__about-title">Về BraveSale</h4>
+          </div>
+          <div class="footer__about-item-container">
+            <a href="#" class="footer__about-item">Giới thiệu BraveSale</a>
+            <a href="#" class="footer__about-item">Tuyển dụng</a>
+            <a href="#" class="footer__about-item">Bán hàng doanh nghiệp</a>
+            <a href="#" class="footer__about-item">Điều khoản sử dụng</a>
+            <a href="#" class="footer__about-item">Điều kiện vận chuyển</a>
+          </div>
+        </div>
+        <div class="footer__container col l-3 c-6">
+          <div class="footer__contact-heading">
+            <h4 class="footer__contact-title">Hợp tác với chúng tôi</h4>
+          </div>
+          <div class="footer__contact-item-container">
+            <a href="#" class="footer__contact-item">Bán hàng cùng BraveSale</a>
+            <a href="#" class="footer__contact-item">Tiếp thị liên kết</a>
+          </div>
+          <div class="footer__contact-heading">
+            <h4 class="footer__contact-title">Liên hệ với chúng tôi</h4>
+          </div>
+          <div class="footer__contact-item-container-contact">
+            <a href="#" class="footer__contact-item-link">
+              <img
+                src="/assets/images/footer/social_contact/facebook.png"
+                width="20px"
+                height="20px"
+                alt="Facebook"
+              />
+            </a>
+            <a href="#" class="footer__contact-item-link">
+              <img
+                src="/assets/images/footer/social_contact/instagram.png"
+                width="20px"
+                height="20px"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#" class="footer__contact-item-link">
+              <img
+                src="/assets/images/footer/social_contact/telegram.png"
+                width="20px"
+                height="20px"
+                alt="Youtube"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="footer__container col l-3 c-6">
+          <div class="footer__delivery-heading">
+            <h4 class="footer__delivery-title">Đơn vị vận chuyển</h4>
+          </div>
+          <div class="footer__delivery-item-container">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/spx_express.png"
+                  alt="SPX Express "
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/giao_hang_nhanh.png"
+                  alt="Giao hàng nhanh"
+                />
+              </span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/viettel_post.png"
+                  alt="Viettel Post"
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/vietnam_post.png"
+                  alt="Vietnam Post"
+                />
+              </span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/j&t_express.png"
+                  alt="J&T Express"
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/grab_express.png"
+                  alt="Grab Express"
+                />
+              </span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/ninja_van.png"
+                  alt="Ninja Van"
+                />
+              </span>
+              <span href="#" class="footer__delivery-item">
+                <img
+                  src="/assets/images/footer/delivery_brand/be.png"
+                  alt="Be"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="footer__quick-contact"
+        style="
+          box-shadow: rgba(0, 0, 0, 0.3) 10px 20px 38px 10px,
+            rgba(0, 0, 0, 0.22) 10px 20px 12px;
+        "
+      >
+        <div class="footer__quick-contact-container hidden-mobile">
+          <img
+            src="../assets/images/main/messagepng.png"
+            width="50px"
+            height="50px"
+            alt="Chat"
+            class="footer__quick-contact-item animate__animated animate__heartBeat"
+          />
+          <img
+            src="../assets/images/main/phone-call.png"
+            width="50px"
+            height="50px"
+            alt="Call"
+            class="footer__quick-contact-item animate__animated animate__heartBeat"
+          />
+        </div>
+        <img
+          src="../assets/images/main/chatbot.png"
+          width="50px"
+          height="50px"
+          alt="ChatBot"
+          class="footer__quick-contact-item animate__animated animate__jackInTheBox"
+        />
+      </div>
+      <!-- <div class="footer__scrollToTop">
+                <img
+                  src="../assets/images/footer/arrow.png"
+                  width="50px"
+                  height="50px"
+                  alt="Arrow"
+                  class="footer__scrollToTop-img"
+                />
+              </div> -->
+      <div class="footer__info row">
+        <div class="footer__info-item col l-12">
+          <div class="footer__info-item-logo">
+            <img
+              src="../assets/images/header/BRAVEBUY_logo.png"
+              width="30px"
+              height="25px"
+              alt=""
+            />
+            <p>Công ty TNHH BraveSale</p>
+          </div>
+          <p class="footer__info-item-message">
+            Giấy chứng nhận đăng ký doanh nghiệp số 012345678 do Sở Kế Hoạch và
+            Đầu Tư Thành phố Hồ Chí Minh cấp lần đầu vào ngày 01/01/2011.
+          </p>
+          <div class="footer__info-item-certification">
+            <h3 class="footer__info-item-certification-title">
+              Chứng nhận bởi
+            </h3>
+            <div class="footer__info-item-certification-img">
+              <img
+                src="../assets/images/footer/info/certi1.png"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+              <img src="../assets/images/footer/info/certi2.svg" alt="" />
+              <img
+                src="../assets/images/footer/info/certi3.png"
+                width="50px"
+                height="50px"
+                alt=""
+              />
+            </div>
+          </div>
+          <p class="footer__info-item-copyright">
+            © 2021 BraveSale. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/detail.js"></script>
+  </body>
 </html>

@@ -13,7 +13,7 @@
 
 .main__right {
   overflow-y: scroll;
-  height: 120vh;
+  height: 130vh;
   padding: 0 !important;
 }
 
@@ -1229,4 +1229,81 @@
 
 #gradient6{
   background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+}
+
+// Alert
+.hidden{
+  display: none;
+}
+
+
+
+.main__right-alert{
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 300px;
+  height: fit-content ;
+  background-color: white; 
+  color: black;
+  z-index: 100;
+  border-radius: $border-radius-small;
+  border: 1px solid rgba(142, 142, 142, 0.765);
+  padding: $padding;
+}
+
+.main__right-alert-content{
+  @include flex(column, center, center);
+  p{
+    margin: 0;
+    margin: $margin 0;
+    white-space: wrap;
+    text-align: center;
+    line-height: normal;
+  }
+}
+
+.main__right-alert-content-note{
+  color: black;
+  font-weight: $font-weight-bold;
+  font-size: $font_size_small;
+  // text-decoration: underline;
+}
+
+.main__right-alert-content-note-content{
+  @include flex(column, center, center);
+  color: black;
+  font-size: $font_size_small;
+  a{
+    color: $secondary-color;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.main__right-alert-content-title{
+  font-weight: $font-weight-bold;
+  font-size: $font_size_large;
+  color: rgb(142, 142, 142);
+}
+
+.main__right-close-alert{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: $font_size_large;
+}
+
+.main__right-alert-content-btn{
+  @include flex(row, center, center);
+  gap: $gap;
+  background-color: yellow;
+  width: 50%;
+  transform: translate(50%, 0);
+  padding: $padding-small 0;
+  border-radius: $border-radius-small;
+  border: 1px solid rgba(142, 142, 142, 0.765);
+  margin: $margin-small 0;
+  cursor: pointer;
 }

@@ -661,7 +661,93 @@
     border: 1px solid rgba(121, 121, 121, 0.532);
     border-radius: $border-radius-small;
   }
-}
+  
+  // CHI TIẾT SẢN PHẨM - DETAIL
+  // **************************//
+  
+    //Info Product 
+  .main__detail-center-info-product-discountSuggest-list{
+    // white-space: wrap !important;
+    overflow: auto;
+  }
+  
+  .main__detail-center-info-product-discountSuggest-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  // Detail Left
+  .main__detail-left-highlight-feature-list-item{
+    justify-content: flex-start !important;
+  }
+  
+  .main__detail-center-info-product-brand{
+    width: 100% !important;
+  }
+
+  .main__detail-center-info-product-discountSuggest{
+    span{
+      white-space: nowrap;
+    }
+  }
+
+  .main__detail-center-info-product-award-item{
+    flex-direction: column !important;
+    span{
+      text-align: center;
+    }
+  }
+  
+  .main__detail-center-info-customer-info-contact{
+    align-items: flex-start !important;
+  }
+
+  .main__detail-center-info-customer-info-edit{
+    white-space: nowrap;
+  }
+  
+  .main__detail-center-options-list{
+    padding: 0;
+    justify-content: center !important;
+  }
+
+  .main__detail-center-options-type{
+    justify-content: center !important;
+  }
+
+  .main__detail-shop-quickView-item{
+    p{
+      margin: 0;
+    }
+  }
+
+  .main__detail-review-sumary-heading{
+    a{
+      text-decoration: none;
+    }
+  }
+  
+  .main__detail-center-suggest-product-voucher{
+    flex-direction: column !important;
+  }
+
+  .main__detail-center-suggest-product-rating{
+    justify-content: center !important;
+    img{
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .main__detail-center-suggest-product-price{
+    justify-content: center !important;
+    font-size: 14px !important;
+  }
+
+  .main__detail-center-suggest-product-img{
+    width: 100%;
+    height: fit-content;
+  }
+} 
 
 // Tablet
 @media only screen and (min-width: 769px) and (max-width: 1025px) {
@@ -670,7 +756,7 @@
     justify-content: center;
   }
   .hidden-tablet {
-    display: none;
+    display: none !important;
   }
   header {
     border: 1px solid #8c8a8a;
@@ -1110,7 +1196,46 @@
       width: 10% !important;
     }
   }
+  
+  .main__detail-left-img-preview-list, .main__detail-left-highlight-feature-list-item{
+    justify-content: center !important;
+  }
+
+  .main__detail-left-img-preview-list-title{
+    h3{
+      text-align: center;
+    }
+  }
+
+  .main__detail-center-options-list{
+    padding: 0;
+    justify-content: center !important;
+  }
+  
+  .main__detail-center-options-type{
+    justify-content: center !important;
+  }
+
+  .main__detail-center-suggest-product-rating{
+    justify-content: center !important;
+  }
+
+  .main__detail-center-suggest-product-price{
+    justify-content: center !important;
+  }
+
+  .main__detail-review-sumary-heading{
+    span{
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+
+
 }
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 768px) {
   .header__top-language,
@@ -1128,7 +1253,7 @@
 @media only screen and (min-width: 1025px) {
   // Ẩn phần tử cho desktop
   .hidden-laptop {
-    display: none;
+    display: none !important;
   }
   .main__account-menu-item-content-choosed {
     background-color: rgb(255, 255, 255);
