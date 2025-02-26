@@ -303,12 +303,20 @@ closeConfirmButton.addEventListener("click", () => {
 
 // Xóa tất cả giỏ hàng
 deleteAllCart.addEventListener("click", () => {
-  const cartContents = document.querySelectorAll(".main__cart-content");
-  cartContents.forEach((cartContent) => {
-    cartContent.remove();
-  });
-  emptyMessageElement.style.display = "flex";
+
+  confirmDeleteElement.style.display = "flex"; // Hiển thị hộp thoại xác nhận
+    overlayElement.style.display = "block";
+  
+    deleteConfirmButton.addEventListener("click", () => {
+      const cartContents = document.querySelectorAll(".main__cart-content");
+      cartContents.forEach((cartContent) => {
+        cartContent.remove();
+      });
+    })
+    emptyMessageElement.style.display = "flex";
 });
+
+
 
 overlayConfirmElement.addEventListener("click", () => {
   confirmDeleteElement.style.display = "none";
