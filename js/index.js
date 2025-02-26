@@ -818,6 +818,34 @@ quantityRemainBarTopElementsForTablet.forEach((element, index) => {
   }
 });
 
+const quantityRemainBarTopElementsForPhone = document.querySelectorAll(
+  ".main__right-flashSale-product-item-quantityRemain-bar-top-forTablet"
+);
+
+quantityRemainBarTopElementsForTablet.forEach((element, index) => {
+  // Tạo giá trị ngẫu nhiên từ 1 đến 14
+  const randomWidthValue = Math.floor(Math.random() * 100) + 1; // Giá trị từ 1 đến 14
+  const randomWidth = randomWidthValue + "%"; // Đổi randomWidthValue thành dạng string với dấu "%"
+
+  // Cập nhật width cho thanh
+  element.style.width = randomWidth;
+
+  // Nếu randomWidthValue > 14, thêm border-radius
+  if (randomWidthValue > 13) {
+    element.style.borderRadius = "15px"; // Cập nhật border-radius nếu chiều rộng lớn hơn 14%
+  }
+
+  // Lấy phần tử number-width-display trong cùng một phần tử chứa thanh
+  const numberDisplay = element
+    .closest(".main__right-flashSale-product-item")
+    .querySelector(".number-width-display-forTablet");
+
+  // Cập nhật giá trị hiển thị cho phần tử .number-width-display
+  if (numberDisplay) {
+    numberDisplay.textContent = randomWidthValue; // Gán số hiển thị bằng randomWidthValue
+  }
+});
+
 // EXPAND SUGGEST GOODS
 const viewMoreButton = document.querySelector(".main__right-viewMore-product-link");
 const suggestProductsElement = document.querySelector(".main__right-suggest-products");
