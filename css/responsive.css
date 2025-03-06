@@ -282,7 +282,7 @@
   }
   .main__right-flashSale-product-item-quantityRemain-forTablet .main__right-flashSale-product-item-quantityRemain-text-forTablet p {
     color: black;
-    z-index: 1000;
+    z-index: 50;
     font-size: 12px;
     margin: 0;
   }
