@@ -176,7 +176,7 @@ fetch("https://dummyjson.com/products")
         <p class="main__right-product-item-tags">#${product.tags}</p>
         </div>
         <div class="main__right-flashSale-product-time-delivery">
-          <img src="../assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
+          <img src="assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
           <span id="time_delivery"></span>
         </div>
          
@@ -258,7 +258,7 @@ fetch("https://dummyjson.com/products")
         }</h5>
         <div class="main__right-product-item-rating">
           <div class="main__right-product-item-rating-inner">
-            <img src="../assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
+            <img src="assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
             <span>${product.rating}</span>
           </div>
           <p class="main__right-product-item-sold">Sold ${product.stock}</p>
@@ -266,7 +266,7 @@ fetch("https://dummyjson.com/products")
         <p class="main__right-product-item-tags">#${product.tags}</p>
         </div>
         <div class="main__right-flashSale-product-time-delivery">
-          <img src="../assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
+          <img src="assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
           <span id="time_delivery_forTopBrand"></span>
         </div>
          
@@ -287,7 +287,7 @@ fetch("https://dummyjson.com/products")
                     </div>
                     <div class="main__right-flashSale-product-badge-2">
                       <img
-                        src="../assets/images/main/products/verified.png"
+                        src="assets/images/main/products/verified.png"
                         width="15px"
                         height="15px"
                         alt="verified logo"
@@ -372,7 +372,7 @@ fetch("https://dummyjson.com/products")
         }</h5>
         <div class="main__right-product-item-rating">
           <div class="main__right-product-item-rating-inner">
-            <img src="../assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
+            <img src="assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
             <span>${product.rating}</span>
           </div>
           <p class="main__right-product-item-sold">Sold ${product.stock}</p>
@@ -380,7 +380,7 @@ fetch("https://dummyjson.com/products")
         <p class="main__right-product-item-tags">#${product.tags}</p>
         </div>
         <div class="main__right-flashSale-product-time-delivery">
-          <img src="../assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
+          <img src="assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
           <span id="time_delivery_forTopForeign"></span>
         </div>
          
@@ -401,7 +401,7 @@ fetch("https://dummyjson.com/products")
                     </div>
                     <div class="main__right-flashSale-product-badge-2">
                       <img
-                        src="../assets/images/main/products/verified.png"
+                        src="assets/images/main/products/verified.png"
                         width="15px"
                         height="15px"
                         alt="verified logo"
@@ -489,7 +489,7 @@ fetch("https://dummyjson.com/products")
         }</h5>
         <div class="main__right-product-item-rating">
           <div class="main__right-product-item-rating-inner">
-            <img src="../assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
+            <img src="assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
             <span>${product.rating}</span>
           </div>
           <p class="main__right-product-item-sold">Sold ${product.stock}</p>
@@ -497,7 +497,7 @@ fetch("https://dummyjson.com/products")
         <p class="main__right-product-item-tags">#${product.tags}</p>
         </div>
         <div class="main__right-flashSale-product-time-delivery">
-          <img src="../assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
+          <img src="assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
           <span id="time_delivery_forSuggestProducts"></span>
         </div>
          
@@ -572,7 +572,7 @@ fetch("https://dummyjson.com/products")
         }</h5>
         <div class="main__right-product-item-rating">
           <div class="main__right-product-item-rating-inner">
-            <img src="../assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
+            <img src="assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
             <span>${product.rating}</span>
           </div>
           <p class="main__right-product-item-sold">Sold ${product.stock}</p>
@@ -580,7 +580,7 @@ fetch("https://dummyjson.com/products")
         <p class="main__right-product-item-tags">#${product.tags}</p>
         </div>
         <div class="main__right-flashSale-product-time-delivery">
-          <img src="../assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
+          <img src="assets/images/main/products/delivery.png" alt="delivery" width="20px" height="20px"/>
           <span id="time_delivery_forTopDealProducts"></span>
         </div>
          
@@ -602,7 +602,7 @@ fetch("https://dummyjson.com/products")
                     </div>
                     <div class="main__right-flashSale-product-badge-2">
                       <img
-                        src="../assets/images/main/products/verified.png"
+                        src="assets/images/main/products/verified.png"
                         width="15px"
                         height="15px"
                         alt="verified logo"
