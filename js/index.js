@@ -168,7 +168,7 @@ fetch("https://dummyjson.com/products")
         }</h5>
         <div class="main__right-product-item-rating">
           <div class="main__right-product-item-rating-inner">
-            <img src="../assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
+            <img src="assets/images/main/products/star.png" alt="rating" width="15px" height="15px">
             <span>${product.rating}</span>
           </div>
           <p class="main__right-product-item-sold">Sold ${product.stock}</p>
