@@ -1,3 +1,7 @@
+.main__detail-wrapper {
+  flex-wrap: nowrap;
+}
+
 .main__detail-left {
   background-color: white;
   height: fit-content;
@@ -220,7 +224,8 @@
   padding: 5px;
 }
 
-.main__detail-right-insurance-content:hover ~ .main__detail-right-insurance-detail {
+.main__detail-right-insurance-content:hover
+  ~ .main__detail-right-insurance-detail {
   display: block;
   animation: zoomInTopRight 0.3s ease-in-out;
   transform-origin: top right;
@@ -432,7 +437,8 @@
   gap: 10px;
   margin: 0;
 }
-.main__detail-center-info-product-discountSuggest-list .main__detail-center-info-product-discountSuggest-item {
+.main__detail-center-info-product-discountSuggest-list
+  .main__detail-center-info-product-discountSuggest-item {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -856,7 +862,9 @@
   margin: auto;
   border-radius: 5px;
   border: 1px solid rgba(81, 81, 81, 0.268);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .main__detail-center-suggest-product-heading {

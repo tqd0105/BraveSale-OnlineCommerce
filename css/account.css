@@ -15,12 +15,16 @@
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  display: none;
 }
 
 .main__account-menu {
   padding: 20px;
   border-radius: 15px;
   margin-top: 20px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
 
 .main__account-menu-item {
@@ -93,11 +97,13 @@
   padding: 20px;
   border-radius: 15px;
   width: 10%;
+  margin-bottom: 20px;
 }
 
 .main__account-info-heading {
   text-align: center;
   margin-top: 0;
+  font-size: 18px;
 }
 
 .main__account-info-item-avatar {

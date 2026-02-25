@@ -1,6 +1,11 @@
 @use "./_variables" as *;
 @use "./_mixins" as *;
 
+// MAIN DETAIL WRAPPER
+.main__detail-wrapper {
+  flex-wrap: nowrap;
+}
+
 // MAIN DETAIL LEFT
 .main__detail-left {
   background-color: white;
@@ -680,7 +685,7 @@
 
 .main__detail-center-info-description-content-img {
   @include flex(row, center, center);
-  img{
+  img {
     width: 100%;
     height: 100%;
   }
@@ -744,7 +749,9 @@
   margin: auto;
   border-radius: 5px;
   border: 1px solid rgba(81, 81, 81, 0.268);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .main__detail-center-suggest-product-heading {
@@ -1082,7 +1089,7 @@
 .main__detail-reviewer-info-container {
   @include flex(row, space-between, center);
   margin-bottom: $margin;
-  img{
+  img {
     cursor: pointer;
   }
 }
@@ -1207,10 +1214,9 @@
 }
 
 .main__detail-comment-detail-replay-fromAdmin-time {
-  
   p {
     margin: 0;
-    padding-left: 5px ;
+    padding-left: 5px;
     border-left: 1px solid rgba(81, 81, 81, 0.226);
   }
 }
@@ -1224,9 +1230,3 @@
     font-weight: $font-weight-normal;
   }
 }
-
-
-
-
-
-

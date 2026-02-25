@@ -35,6 +35,7 @@
   padding: 20px;
   border-radius: 15px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .main__cart-content-product {
@@ -319,7 +320,7 @@ html .main__cart-summary-edit {
   background-color: rgba(142, 142, 142, 0.5);
   width: 40%;
   z-index: 100;
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background-image: linear-gradient(to top, #6f6f6f 0%, #000000 100%);
   border-radius: 15px;
   display: none;
   border: 2px solid white;

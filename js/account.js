@@ -52,7 +52,7 @@ yearSelect.value = currentYear; // Gán năm hiện tại
 updateDays();
 
 // TẠO DANH SÁCH CÁC QUỐC GIA
-fetch("https://restcountries.com/v3.1/all")
+fetch("https://restcountries.com/v3.1/all?fields=name,cca2")
   .then((response) => response.json())
   .then((countries) => {
     const countrySelect = document.getElementById("country-select");

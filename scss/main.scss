@@ -9,12 +9,15 @@
   top: 0;
   overflow-y: auto;
   height: 100%;
+  margin-left: 10px;
 }
 
 .main__right {
   overflow-y: scroll;
-  height: 130vh;
+  width: 1125px;
+  height: 119vh;
   padding: 0 !important;
+  border-radius: $border-radius-small;
 }
 
 .main__left::-webkit-scrollbar,

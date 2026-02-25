@@ -23,7 +23,6 @@ header {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: white;
- 
 }
 
 footer {
@@ -31,7 +30,7 @@ footer {
   padding: 20px;
   background-color: white;
   border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* Đảm bảo box-sizing áp dụng cho tất cả các phần tử */
@@ -41,12 +40,10 @@ footer {
   box-sizing: inherit;
 }
 
-html, body{
+html {
   overflow: scroll;
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
-
-
