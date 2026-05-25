@@ -9,7 +9,7 @@
     justify-content: center;
   }
   .row {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .hidden-mobile {
     display: none !important;
@@ -207,12 +207,12 @@
   .main__right-suggest-products {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 900px; /* Chiều cao khi thu gọn */
     overflow-y: hidden;
     transition: max-height 1s ease-in-out;
-    margin: auto -35px;
+    margin: auto;
     flex-wrap: wrap;
   }
   .main__right-suggest-products .c-5 {

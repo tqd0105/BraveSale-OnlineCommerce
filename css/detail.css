@@ -973,6 +973,7 @@
   background-color: white;
   border-radius: 15px;
   padding: 5px;
+  margin-right: 0 !important;
 }
 
 .main__detail-shop-avatar img {
@@ -1018,7 +1019,7 @@
   display: block;
   top: 0;
   transform: translateY(50%);
-  left: 0px;
+  left: -2%;
   content: "";
   background-color: rgba(128, 128, 128, 0.186);
   width: 1px;
@@ -1085,6 +1086,7 @@
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
+  margin-right: 0 !important;
 }
 
 .main__detail-review-overview h3 {
@@ -1246,6 +1248,7 @@
   background-color: white;
   padding: 20px;
   border-radius: 15px;
+  margin-right: 0 !important;
 }
 
 .main__detail-reviewer-info-container {
