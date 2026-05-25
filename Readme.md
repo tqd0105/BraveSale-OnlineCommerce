@@ -10,9 +10,6 @@
   * Cart Management
   * Search Products
   * Filter Products
-  * Payment (Momo, Credit Cards, ...)
-  * Dark Mode
-  * Language Switch
  
 ### 3. Features
   | Component | Technology |
@@ -37,10 +34,4 @@ Or can view when click to link Github Pages:
 
 **4. Search**
 
-**5. Payment**
-
 **6. Filter**
-
-**7. Dark Mode**
-
-**8. Language Switch (Translate to English)**
